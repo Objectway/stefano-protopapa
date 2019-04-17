@@ -1,0 +1,35 @@
+.my_box{
+    width: 362px; 
+    height: 92px;
+    background-color: #00afec;
+    font-family: 'Libre Barcode 39', cursive;
+    padding: 15px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+
+.riga_1 > span {
+    margin: 0px;
+    font-weight: bold;
+}
+
+.riga_2{
+
+}
+.riga_2 > span {
+    margin: 0px;
+    font-size: 2em;
+
+}
+
+.relative_box{
+    position: relative;
+    padding: 10px;
+    background: green;
+    width: 100px;
+}

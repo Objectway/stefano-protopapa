@@ -1,0 +1,58 @@
+
+body {
+    font-family: 'Comfortaa', cursive;
+}
+.mainWrapper {
+    width: 80%;
+    margin: 0px auto;
+}
+.myHeader {
+    display:block;
+    width: 100%;
+    background: purple;
+    font-size: 14px;
+}
+
+.myMenu {
+    display: block;
+    width: 100%;
+    background: yellow;
+}
+.mySidebar {
+    display: inline-block;
+    width: 35%;
+    background: green;
+    height: 150px;
+    float: right;
+}
+.myMain {
+    display: inline-block;
+    width: 65%;
+    background: orange;
+    height: 150px;
+}
+.myFooter {
+    display: block;
+    width: 100%;
+    background: blue;
+}
+
+.clear{
+    clear: both;
+}
+
+.logo{
+    /*float: left;*/
+    width: 10em;
+    height: 10em;
+    
+}
+
+.title{
+    display: inline;
+    float:right;
+    color: #fff;
+    font-family: 'Alfa Slab One', cursive;
+    font-size:2em;
+    line-height: 8em;
+}

@@ -1,0 +1,30 @@
+#pippo_h1{
+    font-size: 50px;
+}
+
+.colore_verde {
+
+    color: green;
+}
+
+.colore_rosso{
+    color: red;
+}
+
+li{
+    font-size: 40px;
+    text-decoration: underline; 
+}
+
+span > h2{
+    color: purple
+}
+
+a ~ p {
+    color: red;
+}
+
+li, .colore_rosso, #pippo_h1{
+    font-size: 40px
+}
+
