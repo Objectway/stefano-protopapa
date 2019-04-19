@@ -1,0 +1,42 @@
+.wrapper {
+  background: blue;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.wrapper div {
+  background: red;
+  padding: 30px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  line-height: 100px;
+}
+@media (max-width: 700px) {
+  .wrapper div {
+    width: auto;
+    flex-grow: 1;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .wrapper div:first-child {
+    order: 3;
+    background: yellow;
+  }
+}
+@media (max-width: 700px) {
+  .wrapper div:last-child {
+    background: green;
+  }
+}
+@media (max-width: 700px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -52,7 +52,65 @@ body {
     display: inline;
     float:right;
     color: #fff;
-    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Monoton', cursive;
     font-size:2em;
-    line-height: 4em;
+    line-height: 5em;
+}
+
+/* fwfwfsfsfsdfs */
+.myMenu {
+    display: block;
+    width: 100%;
+    background: yellow;
+    
+}
+
+.menuTendinaWrapper{
+
+    position: relative;
+    float: left;
+    
+}
+
+.menuTendinaWrapper span{
+
+    display: inline-block;
+    background-color: #000;
+    padding: 15px 30px 15px 15px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.menuTendina
+{
+    border: #000 solid 2px;
+    position: absolute;
+    display: none;
+    top: 32px;
+    left: 0;
+    border-radius: 0px 0px 4px 4px
+}
+
+.menuTendinaWrapper:hover .menuTendina{
+    display: block;
+}
+
+.menuTendinaWrapper:hover span{
+    color:red;
+}
+
+ul{
+    list-style: none;
+    padding:16px;
+    font-size: 1.5em;
+    margin: 0px;
+}
+
+li:hover{
+    color:red;
+}
+
+span i {
+ margin-left: 25px;
 }

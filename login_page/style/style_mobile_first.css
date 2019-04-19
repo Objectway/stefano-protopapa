@@ -1,0 +1,177 @@
+body {
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (min-width: 900px) {
+  body {
+    background: #269797;
+  }
+}
+
+/* display mobile */
+.loginMainWrapper {
+  display: block;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* MAIN */
+  /* SIDE BAR */
+}
+@media screen and (min-width: 900px) {
+  .loginMainWrapper {
+    flex-direction: row;
+    align-items: stretch;
+    width: 900px;
+    height: 586px;
+    margin: 80px auto;
+  }
+}
+.loginMainWrapper .loginMain {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  font-size: 2px;
+  padding: 0px 32px;
+}
+@media screen and (min-width: 900px) {
+  .loginMainWrapper .loginMain {
+    width: 66%;
+    order: 2;
+  }
+}
+.loginMainWrapper .loginMain .logo_div {
+  width: 100%;
+  text-align: center;
+  display: inline;
+}
+@media screen and (min-width: 900px) {
+  .loginMainWrapper .loginMain .logo_div {
+    display: none;
+  }
+}
+.loginMainWrapper .loginMain .logo_img {
+  background: #fff;
+  border: 20px #fff solid;
+  border-radius: 0px 0px 4px 4px;
+}
+.loginMainWrapper .loginMain .loginMain_title {
+  color: #000;
+  font-weight: bold;
+  font-size: 12em;
+  margin: 69px 0 18px 0;
+}
+.loginMainWrapper .loginMain .loginMain_text {
+  color: #666;
+  font-size: 7em;
+  margin: 0 0 18px 0;
+}
+@media screen and (min-width: 900px) {
+  .loginMainWrapper .loginMain .loginMain_text {
+    margin: 0 0 77px 0;
+  }
+}
+.loginMainWrapper .loginMain .loginMain_lbl {
+  color: #000;
+  font-size: 6em;
+  font-weight: bold;
+  margin: 0px 0 18px 0;
+}
+.loginMainWrapper .loginMain .loginMain_input {
+  width: 100%;
+  padding: 7px 15px;
+  border: 1px solid #c1c1c1;
+  margin: 0px 0 18px 0;
+  box-sizing: border-box;
+}
+.loginMainWrapper .loginMain #loginSubmit {
+  width: 100%;
+  height: 48px;
+  background: #2697fa;
+  margin: 0px 0 18px 0;
+  border: 0px;
+  font-size: 9em;
+  color: #fff;
+  font-weight: bold;
+  padding: 17px 0px;
+  cursor: pointer;
+}
+.loginMainWrapper .loginMain .forget_pass {
+  font-size: 6em;
+  text-decoration: none;
+  color: #2697fa;
+}
+.loginMainWrapper .loginSide {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  background-color: #fff;
+  font-size: 2px;
+  padding: 0 32px;
+}
+@media screen and (min-width: 900px) {
+  .loginMainWrapper .loginSide {
+    width: 34%;
+    order: 1;
+    background-color: #003158;
+  }
+}
+.loginMainWrapper .loginSide .logo_div {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 18px;
+  margin-bottom: 67px;
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .loginMainWrapper .loginSide .logo_div {
+    display: inline;
+  }
+}
+.loginMainWrapper .loginSide .logo_img {
+  background: #fff;
+  width: 115px;
+  border: 20px #fff solid;
+  border-radius: 0px 0px 4px 4px;
+}
+.loginMainWrapper .loginSide .loginSide_title {
+  color: #000;
+  font-weight: bold;
+  font-size: 9em;
+  margin-top: 50px;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 900px) {
+  .loginMainWrapper .loginSide .loginSide_title {
+    color: #fff;
+    margin-top: 0px;
+  }
+}
+.loginMainWrapper .loginSide .loginSide_text {
+  color: #000;
+  opacity: 0.5;
+  font-size: 7em;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 900px) {
+  .loginMainWrapper .loginSide .loginSide_text {
+    color: #fff;
+  }
+}
+.loginMainWrapper .loginSide .loginSide_trynow {
+  color: #000;
+  font-weight: bold;
+  font-size: 8em;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 900px) {
+  .loginMainWrapper .loginSide .loginSide_trynow {
+    color: #fff;
+  }
+}
+.loginMainWrapper .loginSide .loginSide_trynow i {
+  margin-left: 7px;
+}
+
+/*# sourceMappingURL=style_mobile_first.css.map */

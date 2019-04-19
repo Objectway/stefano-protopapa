@@ -3,10 +3,12 @@
 
     <head>
         <title>Login page</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style/reset.css">
-        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <link rel="stylesheet" type="text/css" href="style/style_mobile_first.css">
     </head>
 
     <body>
@@ -18,17 +20,18 @@
                 <span class="loginSide_trynow">ATTIVA ORA <i class="fas fa-angle-right"></i></span>
             </div>
             <div class="loginMain">
+                <div class="logo_div"><img src="img/images.png" class="logo_img"></div>
                 <span class="loginMain_title">Onboarding login</span>
                 <p class="loginMain_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>sed do eiusmod temporaliqua. Ut enim ad minim veniam,</p>
                 <form action="POST">
                     <div class="loginMain_lbl">USERNAME</div>
-                    <input type="email" id="loginMail" class="loginMain_input"><br>
+                    <input type="email" id="loginMail" class="loginMain_input" placeholder="E-Mail"><br>
                     <div class="loginMain_lbl">PASSWORD</div>
-                    <input type="password" id="loginPass" class="loginMain_input"><br>
+                    <input type="password" id="loginPass" class="loginMain_input" placeholder = "Password"><br>
                     <button type="submit" id="loginSubmit">ACCEDI</button>
                      
                 </form>
-                <a href="#">Recupera password</a>
+                <a href="#" class="forget_pass">Recupera password</a>
             </div>
         </div>
     </body>
