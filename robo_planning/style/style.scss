@@ -1,0 +1,258 @@
+$header_color: #005DAD;
+$general_width: 80%;
+body{
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f6f6f6;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0px;
+}
+
+header{
+    display:flex;
+    justify-content: center;
+    background-color: $header_color;
+    .container{
+        display:flex;
+        justify-content: flex-start;
+        width: $general_width;
+        .logo{
+            display: inline-block;
+            padding: 15px;
+            background-color: rgba($color: #000000, $alpha: 0.4)
+        }
+        .menu{
+            display:flex;
+            flex-direction: column;
+            width: 100%;
+            .menuTop{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 0 0 10px;
+                ul{
+                    li{
+                        float: left;
+                        margin: 0px 10px 0px 0px;
+                        padding: 5px;
+                        .headerItem{
+                            color: lightblue;
+                            text-decoration: none;
+                            font-size: 15px;
+
+                        }
+                    }
+                    .selected{
+                            border-top: 0;
+                            border-right: 0;
+                            border-bottom: 1px;
+                            border-left: 0;
+                            border-color: white;
+                            border-style: solid;
+                            
+                            .headerItem{
+                                color: white;
+                                text-decoration: none;
+                                font-size: 15px;
+    
+                        }
+                    }
+                }
+                span i {
+                 margin-left: 25px;
+                }
+                .headerIcon{
+                    float: right;
+                    color: lightblue;
+                    margin-left: 20px;
+                }
+            }
+            .menuTab{
+                
+                margin: 10px;
+
+                ul{
+                    li{
+                        float: left;
+                        margin: 0px 10px 0px 0px;
+                        span{
+                            color: white;
+                            text-decoration: none;
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+//
+//menuTop
+//menuTopItems
+//menuTopIcons
+//newCampaigns
+}
+
+.toolbar{
+    display:flex;
+    justify-content: center;
+    background-color: transparent;
+    .container{
+        width: $general_width;
+        margin-top: 45px;
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom: 2px;
+        border-left: 0px;
+        border-color: #005DAD;
+        border-style: solid;
+        padding-bottom: 15px;
+
+        ul{
+            display:flex;
+            justify-content: flex-start;
+            li{
+                float: left;
+                margin: 0px 10px 0px 0px;
+                width: 20%;
+                a{  
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    i{
+                        color: #005DAD;
+                        font-size: 25px;
+                    }
+                    
+                    span{
+                        color: #005DAD;
+                        text-decoration: none;
+                        font-size: 14px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.kpi{
+    display:flex;
+    justify-content: center;
+    background-color: transparent;
+    h1{
+        margin-bottom: 15px;
+    }
+    .container{
+        width: $general_width;
+        margin-top: 45px;
+        padding-bottom: 15px;
+        .widgetContenent{
+            display: flex;
+            justify-content: space-between;
+            .widgetBox{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 10px;
+                border: rgba(0,0,0,0.1) 1px solid;
+                border-radius: 4px;
+                background-color: #fff;
+                -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+                -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+                box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+                margin-left: 15px;
+                width: 20%;
+                &:first-child{
+                    margin-left: 0px;
+                    width: 40%;
+                }
+                
+                .sndLineBig
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    h3{
+                        color: #005DAD;
+                        font-size: 20px;
+                        margin-bottom: 6px;
+                    }
+                    div{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        .segment{
+                            display: flex;
+                            flex-direction: column;
+                            margin-right: 25px;
+                            .title{
+                                color: grey;
+                                font-size: 12px;
+                            }
+                            span{
+                                font-size: 13px;
+                            }
+                        }
+                        .covered{
+                            display: flex;
+                            flex-direction: column;
+                            .title{
+                                color: grey;
+                                font-size: 12px;
+                            }
+                            span{
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+                .sndLine
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    h5{
+                        color: grey;
+                        font-size: 14px;
+                    }
+                    .value{
+                        font-size: 43px;
+                        color: #005DAD;
+                    }
+                        
+                    .amount{
+                        font-size: 22px;
+                        color: #005DAD;
+                    }
+                    .currency
+                    {
+                        font-size: 26px;
+                        color: lightgrey;
+                    }
+                }
+                .infoBox{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    color: rgb(0, 153, 255);
+                    font-size: 13px;
+                    i{
+                        margin-right: 5px
+                    }
+                }
+            }
+
+        }
+    }
+}

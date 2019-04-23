@@ -1,0 +1,234 @@
+body {
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f6f6f6;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #005DAD;
+}
+header .container {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}
+header .container .logo {
+  display: inline-block;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+header .container .menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+header .container .menu .menuTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 0 10px;
+}
+header .container .menu .menuTop ul li {
+  float: left;
+  margin: 0px 10px 0px 0px;
+  padding: 5px;
+}
+header .container .menu .menuTop ul li .headerItem {
+  color: lightblue;
+  text-decoration: none;
+  font-size: 15px;
+}
+header .container .menu .menuTop ul .selected {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px;
+  border-left: 0;
+  border-color: white;
+  border-style: solid;
+}
+header .container .menu .menuTop ul .selected .headerItem {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+header .container .menu .menuTop span i {
+  margin-left: 25px;
+}
+header .container .menu .menuTop .headerIcon {
+  float: right;
+  color: lightblue;
+  margin-left: 20px;
+}
+header .container .menu .menuTab {
+  margin: 10px;
+}
+header .container .menu .menuTab ul li {
+  float: left;
+  margin: 0px 10px 0px 0px;
+}
+header .container .menu .menuTab ul li span {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+.toolbar .container {
+  width: 80%;
+  margin-top: 45px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 2px;
+  border-left: 0px;
+  border-color: #005DAD;
+  border-style: solid;
+  padding-bottom: 15px;
+}
+.toolbar .container ul {
+  display: flex;
+  justify-content: flex-start;
+}
+.toolbar .container ul li {
+  float: left;
+  margin: 0px 10px 0px 0px;
+  width: 20%;
+}
+.toolbar .container ul li a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.toolbar .container ul li a i {
+  color: #005DAD;
+  font-size: 25px;
+}
+.toolbar .container ul li a span {
+  color: #005DAD;
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.kpi {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+.kpi h1 {
+  margin-bottom: 15px;
+}
+.kpi .container {
+  width: 80%;
+  margin-top: 45px;
+  padding-bottom: 15px;
+}
+.kpi .container .widgetContenent {
+  display: flex;
+  justify-content: space-between;
+}
+.kpi .container .widgetContenent .widgetBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border: rgba(0, 0, 0, 0.1) 1px solid;
+  border-radius: 4px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+  margin-left: 15px;
+  width: 20%;
+}
+.kpi .container .widgetContenent .widgetBox:first-child {
+  margin-left: 0px;
+  width: 40%;
+}
+.kpi .container .widgetContenent .widgetBox .sndLineBig {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.kpi .container .widgetContenent .widgetBox .sndLineBig h3 {
+  color: #005DAD;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.kpi .container .widgetContenent .widgetBox .sndLineBig div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.kpi .container .widgetContenent .widgetBox .sndLineBig div .segment {
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
+}
+.kpi .container .widgetContenent .widgetBox .sndLineBig div .segment .title {
+  color: grey;
+  font-size: 12px;
+}
+.kpi .container .widgetContenent .widgetBox .sndLineBig div .segment span {
+  font-size: 13px;
+}
+.kpi .container .widgetContenent .widgetBox .sndLineBig div .covered {
+  display: flex;
+  flex-direction: column;
+}
+.kpi .container .widgetContenent .widgetBox .sndLineBig div .covered .title {
+  color: grey;
+  font-size: 12px;
+}
+.kpi .container .widgetContenent .widgetBox .sndLineBig div .covered span {
+  font-size: 13px;
+}
+.kpi .container .widgetContenent .widgetBox .sndLine {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.kpi .container .widgetContenent .widgetBox .sndLine h5 {
+  color: grey;
+  font-size: 14px;
+}
+.kpi .container .widgetContenent .widgetBox .sndLine .value {
+  font-size: 43px;
+  color: #005DAD;
+}
+.kpi .container .widgetContenent .widgetBox .sndLine .amount {
+  font-size: 22px;
+  color: #005DAD;
+}
+.kpi .container .widgetContenent .widgetBox .sndLine .currency {
+  font-size: 26px;
+  color: lightgrey;
+}
+.kpi .container .widgetContenent .widgetBox .infoBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #0099ff;
+  font-size: 13px;
+}
+.kpi .container .widgetContenent .widgetBox .infoBox i {
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
