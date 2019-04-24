@@ -12,3 +12,13 @@ body{
 @import '6_components/toolbar';
 @import '6_components/widget_ebitda';
 
+.toolbar{
+    @include justify_content(center);
+    .container{
+        width: $general_width;
+        margin-top: 45px;
+        border-style: solid;
+        padding-bottom: 15px;
+    }
+}
+
