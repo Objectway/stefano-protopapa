@@ -1,0 +1,217 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f6f6f6;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #005DAD;
+  font-size: 2px;
+}
+header .container {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}
+header .container .logo {
+  display: inline-block;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+header .container .menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+header .container .menu .menuTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0 0 20px;
+}
+header .container .menu .menuTop ul li {
+  float: left;
+  margin: 0 10px 0 0;
+  padding: 0 0 10px 0;
+}
+header .container .menu .menuTop ul li a {
+  color: lightblue;
+  text-decoration: none;
+  font-size: 7em;
+}
+header .container .menu .menuTop ul .selected {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px;
+  border-left: 0;
+  border-color: white;
+  border-style: solid;
+}
+header .container .menu .menuTop ul .selected a {
+  color: white;
+}
+header .container .menu .menuTop .menuTopIcons {
+  display: flex;
+  flex-direction: column-revert;
+}
+header .container .menu .menuTop .menuTopIcons .headerIcon i {
+  margin-left: 14px;
+  color: lightblue;
+  font-size: 7em;
+}
+header .container .menu .menuTab {
+  margin: 10px 0 0 20px;
+}
+header .container .menu .menuTab ul li {
+  float: left;
+  margin: 0px 10px 0px 0px;
+}
+header .container .menu .menuTab ul li span {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+}
+.toolbar .container {
+  width: 80%;
+  margin-top: 45px;
+  border-style: solid;
+  padding-bottom: 15px;
+}
+.toolbar .container ul {
+  display: flex;
+  justify-content: flex-start;
+}
+.toolbar .container ul li {
+  float: left;
+  padding: 0 10px 10px 0;
+  width: 20%;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px;
+  border-left: 0;
+  border-color: grey;
+  border-style: solid;
+}
+.toolbar .container ul li a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.toolbar .container ul li a i {
+  color: grey;
+  font-size: 25px;
+}
+.toolbar .container ul li a .stepNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+}
+.toolbar .container ul li a span {
+  color: grey;
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.toolbar .container ul .stepSelected {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px;
+  border-left: 0;
+  border-color: #005DAD;
+  border-style: solid;
+}
+.toolbar .container ul .stepSelected i {
+  color: #005DAD;
+}
+.toolbar .container ul .stepSelected .stepNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #005DAD;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+}
+.toolbar .container ul .stepSelected span {
+  color: #005DAD;
+}
+
+.widget_ebitda {
+  display: flex;
+  justify-content: center;
+  font-size: 2px;
+  margin-top: 45px;
+}
+.widget_ebitda .container {
+  width: 80%;
+}
+.widget_ebitda .container .title {
+  font-size: 12em;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 25px;
+}
+.widget_ebitda .container .contenent {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+.widget_ebitda .container .contenent .avatar {
+  display: inline-block;
+  margin-right: 20px;
+}
+.widget_ebitda .container .contenent .avatar img {
+  height: 100px;
+  width: 100px;
+}
+.widget_ebitda .container .contenent .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.widget_ebitda .container .contenent .info .clients_num {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.widget_ebitda .container .contenent .info .clients_num span:first-child {
+  font-size: 8em;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.widget_ebitda .container .contenent .info .clients_num span:last-child {
+  font-size: 7em;
+  color: gray;
+  font-weight: bold;
+}
+.widget_ebitda .container .contenent .info .show_list span {
+  font-size: 7em;
+  color: #0099ff;
+  font-weight: bold;
+}
+.widget_ebitda .container .contenent .info .show_list span i {
+  margin-left: 4px;
+}
+
+/*# sourceMappingURL=style.css.map */

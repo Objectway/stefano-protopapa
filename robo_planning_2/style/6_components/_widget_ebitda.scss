@@ -1,0 +1,58 @@
+.widget_ebitda{
+    @include justify_content(center);
+    font-size: $font_size;
+    margin-top: 45px;
+    .container{
+        width: $general_width;
+        .title{
+            font-size: 12em;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 25px;
+        }
+        .contenent{
+            @include justify_content(flex-start);
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 4px;
+            .avatar{
+                display: inline-block;
+                margin-right: 20px;
+                img{
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+            .info{
+                @include flex_direction(column);
+                justify-content: center;
+                .clients_num{
+                    @include flex_direction(column);
+                    margin-bottom: 10px;
+                    span:first-child{
+                        font-size: 8em;
+                        color: black;
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                    span:last-child{
+                        font-size: 7em;
+                        color: gray;
+                        font-weight: bold;
+                    }
+                }
+                .show_list{
+                    span{
+                        font-size: 7em;
+                        color: $link_color;
+                        font-weight: bold;
+                        i{
+                            margin-left:4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

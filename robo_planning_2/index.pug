@@ -1,0 +1,64 @@
+
+
+- 
+    var arr_input = [
+        {
+            class: "simple",
+            label: "START DATE", 
+            type: "date",
+            placeholder: null,
+            value: "15/01/2018"
+        },{
+            class: "simple",
+            label: "END DATE", 
+            type: "date",
+            placeholder: null,
+            value: "15/01/2018"
+        },{
+            class: "simple_butt",
+            label: "COMPATIBILITY", 
+            type: "text",
+            placeholder: "60",
+            value: null
+        },{
+            class: "simple_butt",
+            label: "LIQUICITY", 
+            type: "text",
+            placeholder: "100",
+            value: null
+        },{
+            class: "simple",
+            label: "AMMOUNTS DATE", 
+            type: "date",
+            placeholder: "--/--/----",
+            value: null
+        }
+    ]
+
+doctype html
+html
+    head
+        title Robo Planning 2
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width,initial-scale=1.0")
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.8.1/css/all.css", integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf", crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet")
+        link(rel="stylesheet", href="style/3_generic/reset.css")
+        link(rel="stylesheet", href="style/style.css")
+    body
+        include view/header.pug
+        include view/toolbar.pug
+        include view/widget_ebitda.pug
+
+        main.widget_filter
+            .container
+                .contenent
+                    each val, index in arr_input
+                        .col
+                            .inputLbl val.label
+                            .inputOgg
+                                if val.class == "simple_butt"
+                                    input(class="simpleInputLbl", type = val.type, placeholder = val.placeholder, value = val.value)
+                                    label %
+                                else                   
+                                    input(class="simpleInputLbl", type = val.type, placeholder = val.placeholder, value = val.value)

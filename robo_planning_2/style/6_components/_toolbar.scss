@@ -1,0 +1,55 @@
+.toolbar{
+    @include justify_content(center);
+    .container{
+        width: $general_width;
+        margin-top: 45px;
+        border-style: solid;
+        padding-bottom: 15px;
+
+        ul{
+            display:flex;
+            justify-content: flex-start;
+            li{
+                float: left;
+                padding: 0 10px 10px 0;
+                width: 20%;
+                @include border_size(0, 0, 2px, 0);
+                @include border_color_style($toolbar_font_color, solid);
+                
+                a{  
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    i{
+                        color: $toolbar_font_color;
+                        font-size: 25px;
+                    }
+
+                    @include stepNumber($toolbar_font_color);
+
+                    span{
+                        color: $toolbar_font_color;
+                        text-decoration: none;
+                        font-size: 14px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .stepSelected{
+                @include border_size(0, 0, 2px, 0);
+                @include border_color_style($toolbar_font_color_selected, solid);
+                i{
+                    color: $toolbar_font_color_selected;
+                }
+                
+                @include stepNumber($toolbar_font_color_selected);
+
+                span{
+                    color: $toolbar_font_color_selected;
+                }
+            }
+        }
+    }
+}

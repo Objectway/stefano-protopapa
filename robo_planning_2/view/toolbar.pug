@@ -1,0 +1,48 @@
+
+- 
+    var step = [
+        {
+            status: 2, 
+            icon: "fas fa-check-circle",
+            name: "Segment Choice and Analysis"
+        },{
+            status: 1, 
+            icon: 2,
+            name: "Setup Mai Parameters"
+        },{
+            status: 0, 
+            icon: 3,
+            name: "Strategies and Constraints"
+        },{
+            status: 0, 
+            icon: 4,
+            name: "Conversions"
+        },{
+            status: 0, 
+            icon: 5,
+            name: "Proposals"
+        }
+    ]
+
+nav.toolbar
+    .container
+        ul
+            each val, index in step
+                case val.status
+                    when 0
+                        li
+                            a(href="#")
+                                i.stepNumber= val.icon
+                                span= val.name
+                    when 1
+                        li.stepSelected
+                            a(href="#")
+                                i.stepNumber= val.icon
+                                span= val.name
+                    when 2
+                        li.stepSelected
+                            a(href="#")
+                                i(class=val.icon)
+                                span= val.name
+                    default
+                        li

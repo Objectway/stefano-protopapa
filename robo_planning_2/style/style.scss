@@ -1,0 +1,14 @@
+@import '1_setting/generic_setting';
+@import '1_setting/palette';
+@import '2_tools/mixin_utility';
+@import '5_object/small_object';
+
+body{
+    font-family: $font_family;
+    background-color: $body_color;
+}
+
+@import '6_components/header';
+@import '6_components/toolbar';
+@import '6_components/widget_ebitda';
+

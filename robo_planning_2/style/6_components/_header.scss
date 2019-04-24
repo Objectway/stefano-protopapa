@@ -1,0 +1,68 @@
+header{
+    @include justify_content(center);
+    background-color: $header_color;
+    font-size: $font_size;
+    .container{
+        @include justify_content(flex-start);
+        width: $general_width;
+        .logo{
+            display: inline-block;
+            padding: 15px;
+            background-color: rgba($color: #000000, $alpha: 0.4)
+        }
+        .menu{
+            @include flex_direction(column);
+            width: 100%;
+            .menuTop{
+                @include justify_content(space-between);
+                align-items: center;
+                margin: 15px 0 0 20px;
+                ul{
+                    li{
+                        float: left;
+                        margin: 0 10px 0 0;
+                        padding: 0 0 10px  0;
+                        a{
+                            color: $menu_font_color;
+                            text-decoration: none;
+                            font-size: 7em;
+
+                        }
+                    }
+                    .selected{
+                        @include border_size(0, 0, 1px, 0);
+                        @include border_color_style($menu_font_color_selected, solid);
+                        a{
+                            color: $menu_font_color_selected;
+                        }
+                    }
+                }
+                .menuTopIcons{
+                    @include flex_direction(column-revert);
+                    .headerIcon{
+                        i{
+                            margin-left: 14px;
+                            color: $menu_font_color;
+                            font-size: 7em;
+                        }
+                    }
+                }
+            }
+            .menuTab{
+                
+                margin: 10px 0 0 20px;
+                ul{
+                    li{
+                        float: left;
+                        margin: 0px 10px 0px 0px;
+                        span{
+                            color: white;
+                            text-decoration: none;
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

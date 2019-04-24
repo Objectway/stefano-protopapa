@@ -1,0 +1,26 @@
+//mixin border size (top - right - bottom - left)
+@mixin border_size($top, $right, $bottom, $left) {
+    border-top: $top;
+    border-right: $right;
+    border-bottom: $bottom;
+    border-left: $left;
+}
+
+//mixin border color && style
+@mixin border_color_style($color, $style) {
+    border-color: $color;
+    border-style: $style;
+}
+
+//mixin flexbox 
+//mixin justify-content
+@mixin justify_content($value){
+    display:flex;
+    justify-content: $value;
+}
+
+//mixin flex-direction
+@mixin flex_direction($value){
+    display:flex;
+    flex-direction: $value;
+}

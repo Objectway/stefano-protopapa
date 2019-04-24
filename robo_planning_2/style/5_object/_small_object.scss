@@ -1,0 +1,15 @@
+@mixin stepNumber($color) {
+
+    .stepNumber{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        width: 25px;
+        height: 25px;
+        border-radius: 100px;
+    }
+}

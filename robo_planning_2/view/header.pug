@@ -1,0 +1,26 @@
+// HEADER
+
+header
+    .container
+        .logo
+            img(src="img/logo.png")
+        .menu
+            nav.menuTop
+                .menuTopItems
+                    ul
+                        each val, index in ['Campaigns', 'Segments', 'Products', 'Model portfolios']
+                            if index == 0
+                                li.selected
+                                    a(href="#")= val
+                            else
+                                li
+                                    a(href="#")= val
+
+                .menuTopIcons
+                    each val, index in ['fas fa-user', 'fas fa-bell', 'fas fa-comments', 'fas fa-circle', 'fas fa-search']
+                        a.headerIcon(href="#")
+                            i(class=val)
+            nav.menuTab
+                ul
+                    li
+                        span.headerTab New Campaign
