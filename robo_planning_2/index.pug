@@ -45,12 +45,24 @@ html
         link(href="https://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet")
         link(rel="stylesheet", href="style/3_generic/reset.css")
         link(rel="stylesheet", href="style/style.css")
+        script(src="script/script.js")
     body
+        .div_overlay
         include view/header.pug
         include view/toolbar.pug
         include view/widget_ebitda.pug
 
-        main.widget_filter
+        nav.bottone
+            button.view_arr Vedi array
+
+
+        //pop up
+        .child
+            .close_wrap
+                .close x
+            .child_text
+
+        //main.widget_filter
             .container
                 .contenent
                     each val, index in arr_input
@@ -61,4 +73,4 @@ html
                                     input(class="simpleInputLbl", type = val.type, placeholder = val.placeholder, value = val.value)
                                     label %
                                 else                   
-                                    input(class="simpleInputLbl", type = val.type, placeholder = val.placeholder, value = val.value)
+                                    input(class="simpleInputLbl", type = val.type, placeholder = val.placeholder, value = val.value)//

@@ -214,4 +214,74 @@ header .container .menu .menuTab ul li span {
   margin-left: 4px;
 }
 
+.toolbar {
+  display: flex;
+  justify-content: center;
+}
+.toolbar .container {
+  width: 80%;
+  margin-top: 45px;
+  border-style: solid;
+  padding-bottom: 15px;
+}
+
+nav.bottone {
+  text-align: center;
+  margin-top: 45px;
+}
+nav.bottone .view_arr {
+  height: 80px;
+  width: 150px;
+}
+
+.child {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 3;
+}
+.child--isVisible {
+  display: block;
+}
+.child .close_wrap {
+  width: 100%;
+  height: 25px;
+}
+.child .close_wrap .close {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #005DAD;
+  color: white;
+  border-radius: 100px 100px 100px 0;
+  font-weight: bold;
+}
+.child .child_text {
+  border: 2px solid #005DAD;
+  background-color: white;
+  height: 425px;
+  margin: 0 25px;
+  padding: 20px;
+}
+
+.div_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.7;
+  display: none;
+  z-index: 2;
+}
+.div_overlay--isVisible {
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */
