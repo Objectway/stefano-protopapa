@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     var auto = [];
     auto.push('Ferrari', 'Lamborghini', 'McLaren', 'Audi');
     const popup = document.querySelector(".child");
-    const popup_text = document.querySelector(".child_text");
     const overlay = document.querySelector(".div_overlay");
     const close = document.querySelector(".close");
     var open = false;
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
         overlay.className += " div_overlay--isVisible";
         
         auto.forEach(function(element) {
-            popup_text.innerHTML += element + "<br>";
+            popup.innerHTML += element + "<br>";
         });
     }
 
@@ -24,14 +23,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
         if (evt.keyCode == 27) {
             popup.className = "child";
             overlay.className = "div_overlay";
-            popup_text.innerHTML = "";
+            popup.innerHTML = "";
         }
     };
 
     close.onclick = function(){
         popup.className = "child";
         overlay.className = "div_overlay";
-        popup_text.innerHTML = "";
+        popup.innerHTML = "";
     };
 
     /*document.onclick = function(event) {
@@ -42,5 +41,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
             popup_text.innerHTML = "";
         }
     };*/
+    document.querySelector(".div_overlay").onclick = function(event){
+        popup.className = "child";
+        overlay.className = "div_overlay";
+        popup.innerHTML = "";
+    }
   });
   

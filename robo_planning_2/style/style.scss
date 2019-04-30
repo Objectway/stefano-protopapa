@@ -41,31 +41,28 @@ nav.bottone{
     transform: translate(-50%, -50%);
     display: none;
     z-index: 3;
+    border: 2px solid #005DAD;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
     &--isVisible{
         display: block;
     }
-    .close_wrap{
-        width: 100%;
+    
+    .close{
+        position: relative;
+        top: 0%;
+        left: 100%;
+        transform: translate(86%, -184%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
         height: 25px;
-        .close{
-            float: right;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 25px;
-            height: 25px;
-            background-color: #005DAD;
-            color: white;
-            border-radius: 100px 100px 100px 0;
-            font-weight: bold;
-        }
-    }
-    .child_text{
-        border: 2px solid #005DAD;
-        background-color: white;
-        height: 425px;
-        margin: 0 25px;
-        padding: 20px;
+        background-color: #005DAD;
+        color: white;
+        border-radius: 100px 100px 100px 0;
+        font-weight: bold;
     }
 }
 
