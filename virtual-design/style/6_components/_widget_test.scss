@@ -1,0 +1,18 @@
+/*
+@mixin widget($widget_style) {
+    
+    $arr_key_name: ('white', 'blue');
+    $arr_background: ('white', 'red');
+    
+    $key_name: nth($arr_key_name, widget_style);
+    $background: nth($arr_background, widget_style);
+    
+    .widget_#{$key_name} {
+        background-color: $background;
+    }
+}
+
+
+@include widget(0);
+@include widget(1);
+*/

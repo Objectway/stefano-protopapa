@@ -1,0 +1,58 @@
+.contact_us{
+    @include flex_direction(column);
+    font-size: $font_size;
+    
+    .container{
+        @include flex_direction(column);
+        align-items: center;
+        width: 60%;
+        margin: 20px auto;
+    }
+
+    h2{
+        margin-bottom: 20px;
+    }
+
+    p{
+        font-size: 12em;
+        text-align: center;
+        margin-bottom:20px;
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-style: normal;
+    }
+    .riga{
+        @include flex_direction(row);
+        width: 100%;
+        .colonna-1-1
+        {
+            width:100%;
+        }
+        .colonna-1-2
+        {
+            width:50%;
+        }
+        #contact_form{
+            width: 100%;
+        }
+        .lbl{
+            font-size: 10em;
+            text-transform: uppercase;
+            margin-bottom: 5px
+        }
+        .styleInput{
+            width:100%;
+            margin-bottom: 40px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            font-size: 12em;
+        }
+        submit{
+            font-size: 12em;
+            background-color: lightskyblue;
+            color:white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    }
+}

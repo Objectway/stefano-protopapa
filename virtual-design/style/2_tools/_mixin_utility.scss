@@ -1,0 +1,12 @@
+//mixin flexbox 
+//mixin justify-content
+@mixin justify_content($value){
+    display:flex;
+    justify-content: $value;
+}
+
+//mixin flex-direction
+@mixin flex_direction($value){
+    display:flex;
+    flex-direction: $value;
+}

@@ -1,0 +1,366 @@
+@font-face {
+  font-family: "Bitter";
+  src: url("font/Bitter/Bitter-Italic.woff2") format("woff2"), url("font/Bitter/Bitter-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Bitter";
+  src: url("font/Bitter/Bitter-Regular.woff2") format("woff2"), url("font/Bitter/Bitter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bitter";
+  src: url("font/Bitter/Bitter-Italic.woff2") format("woff2"), url("font/Bitter/Bitter-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Bitter";
+  src: url("font/Bitter/Bitter-Regular.woff2") format("woff2"), url("font/Bitter/Bitter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("font/Roboto/Roboto-Regular.woff2") format("woff2"), url("font/Roboto/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("font/Roboto/Roboto-Bold.woff2") format("woff2"), url("font/Roboto/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("font/Roboto/Roboto-Medium.woff2") format("woff2"), url("font/Roboto/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("font/Roboto/Roboto-Medium.woff2") format("woff2"), url("font/Roboto/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("font/Roboto/Roboto-Bold.woff2") format("woff2"), url("font/Roboto/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("font/Roboto/Roboto-Regular.woff2") format("woff2"), url("font/Roboto/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 30em;
+}
+
+h2 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 24em;
+}
+
+h3 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 18em;
+}
+
+h3 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 12em;
+}
+
+h4 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 7em;
+}
+
+h6 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 6em;
+}
+
+.child {
+  width: 550px;
+  height: 550px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 3;
+  border: 3px solid lightcoral;
+  background-color: white;
+  box-sizing: border-box;
+}
+.child--isVisible {
+  display: block;
+}
+.child .close {
+  text-align: right;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+}
+.child .popUpBody {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 40px;
+}
+.child .popUpBody div {
+  margin-bottom: 60px;
+}
+.child .popUpBody div span {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+}
+.child .popUpBody div span:first-child {
+  color: black;
+}
+.child .popUpBody div span:last-child {
+  color: red;
+  margin-left: 40px;
+}
+
+.div_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.7;
+  display: none;
+  z-index: 2;
+}
+.div_overlay--isVisible {
+  display: block;
+}
+
+.headerBackground {
+  position: absolute;
+  width: 100%;
+  z-index: -999;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  font-size: 2px;
+}
+header .container {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  margin: 20px auto;
+}
+header .container .logo {
+  display: inline-block;
+}
+header .container .menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+header .container .menu .menuTop ul li {
+  float: left;
+  margin: 0 0 0 36px;
+}
+header .container .menu .menuTop ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 7em;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+}
+header .slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: 302px;
+  margin: 0 auto;
+  color: white;
+}
+header .slider h2 {
+  margin: 0 0 10px 0;
+}
+header .slider h4 {
+  margin: 0 0 10px 0;
+}
+header .slider a {
+  width: 200px;
+  text-align: center;
+  font-size: 10em;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+  background-color: #42a742;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+}
+
+.widget_white {
+  display: flex;
+  flex-direction: column;
+  font-size: 2px;
+  background-color: white;
+  color: grey;
+}
+.widget_white .container {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  margin: 20px auto;
+}
+.widget_white .container .whiteTitle {
+  min-width: 40%;
+  margin-bottom: 10px;
+  color: black;
+}
+.widget_white .container .whiteText h3 {
+  margin-bottom: 5px;
+  color: grey;
+}
+.widget_white .container .whiteText p {
+  font-size: 7em;
+  margin-bottom: 5px;
+  color: black;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.widget_blue {
+  display: flex;
+  flex-direction: column;
+  font-size: 2px;
+  background-color: blue;
+  color: white;
+}
+.widget_blue .container {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  margin: 20px auto;
+}
+.widget_blue .container .blueTitle {
+  min-width: 40%;
+  margin-bottom: 10px;
+}
+.widget_blue .container .blueText h3 {
+  margin-bottom: 5px;
+}
+.widget_blue .container .blueText p {
+  font-size: 7em;
+  margin-bottom: 5px;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.contact_us {
+  display: flex;
+  flex-direction: column;
+  font-size: 2px;
+}
+.contact_us .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 20px auto;
+}
+.contact_us h2 {
+  margin-bottom: 20px;
+}
+.contact_us p {
+  font-size: 12em;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-style: normal;
+}
+.contact_us .riga {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.contact_us .riga .colonna-1-1 {
+  width: 100%;
+}
+.contact_us .riga .colonna-1-2 {
+  width: 50%;
+}
+.contact_us .riga #contact_form {
+  width: 100%;
+}
+.contact_us .riga .lbl {
+  font-size: 10em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.contact_us .riga .styleInput {
+  width: 100%;
+  margin-bottom: 40px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  font-size: 12em;
+}
+.contact_us .riga submit {
+  font-size: 12em;
+  background-color: lightskyblue;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  font-size: 2px;
+  background-color: purple;
+  margin-top: 40px;
+}
+footer .container {
+  width: 80%;
+  margin: 20px auto;
+  color: white;
+  font-size: 7em;
+  font-family: "Bitter";
+  font-weight: normal;
+  font-style: italic;
+}
+
+/*# sourceMappingURL=style.css.map */

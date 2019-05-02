@@ -1,0 +1,55 @@
+
+
+- 
+    var arr_input = [
+        {
+            class: "simple",
+            label: "START DATE", 
+            type: "date",
+            placeholder: null,
+            value: "15/01/2018"
+        },{
+            class: "simple",
+            label: "END DATE", 
+            type: "date",
+            placeholder: null,
+            value: "15/01/2018"
+        },{
+            class: "simple_butt",
+            label: "COMPATIBILITY", 
+            type: "text",
+            placeholder: "60",
+            value: null
+        },{
+            class: "simple_butt",
+            label: "LIQUICITY", 
+            type: "text",
+            placeholder: "100",
+            value: null
+        },{
+            class: "simple",
+            label: "AMMOUNTS DATE", 
+            type: "date",
+            placeholder: "--/--/----",
+            value: null
+        }
+    ]
+
+doctype html
+html
+    head
+        title Virtual Design
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width,initial-scale=1.0")
+        link(rel="stylesheet", href="style/3_generic/reset.css")
+        link(rel="stylesheet", href="style/style.css")
+        script(type="text/javascript", src="script/script.js")
+    body
+        
+        include view/pop_up.pug
+        include view/header.pug
+        main   
+            include view/widget_white.pug
+            include view/widget_blue.pug
+            include view/contact_form.pug
+        include view/footer.pug

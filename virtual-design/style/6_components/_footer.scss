@@ -1,0 +1,16 @@
+footer{
+    @include flex_direction(column);
+    font-size: $font_size;
+    background-color: purple;
+    margin-top: 40px;
+    
+    .container{
+        width: $general_width;
+        margin: 20px auto;
+        color: white;
+        font-size: 7em;
+        font-family: 'Bitter';
+        font-weight: normal;
+        font-style: italic;
+    }
+}

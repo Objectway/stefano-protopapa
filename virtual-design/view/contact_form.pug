@@ -1,0 +1,29 @@
+.contact_us
+    .container
+        h2 CONTACT US
+        p For more information about the services we offer, and how we can work with you, please provide us with the following items of information.
+        .riga
+            form(id="contact_form")
+                .riga
+                    .colonna-1-2
+                        .lbl Full name*
+                        .inputDiv
+                            input(class="styleInput", name="inputNome")
+
+                    .colonna-1-2
+                        .lbl Phone number
+                        .inputDiv
+                            input(class="styleInput", name="inputTel")
+                .riga
+                    .colonna-1-1
+                        .lbl E-mail address*
+                        .inputDiv
+                            input(class="styleInput", name="inputMail", type="email")
+                .riga
+                    .colonna-1-1
+                        .lbl Your message*
+                        .inputDiv
+                            textarea(class="styleInput", name="inptMsg", cols="30", rows="10")
+                .riga
+                    .colonna-1-1
+                        submit(id="sub-form")= "Send the message"

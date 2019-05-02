@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1223,
+        "nome": "Andrea",
+        "cognome": "Rossi",
+        "genere": "Maschio",
+        "professione": "dev"
+    },
+    {
+        "id": 1224,
+        "nome": "Luigi",
+        "cognome": "Bianchi",
+        "genere": "Maschio",
+        "professione": "driver"
+    },
+    {
+        "id": 1225,
+        "nome": "Anna",
+        "cognome": "Verdi",
+        "genere": "Femmina",
+        "professione": "UR"
+    }
+]

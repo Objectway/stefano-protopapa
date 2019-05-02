@@ -1,0 +1,20 @@
+// HEADER
+
+
+img.headerBackground(src="assets/metropolis.jpg")
+header
+    .container
+        .logo
+            img(src="assets/OW-Logo.svg")
+        .menu
+            nav.menuTop
+                ul.mainMenu
+                    each val, index in ['Home', 'The Group', 'Business', 'Parners', 'Contact Us']
+                        li
+                            a(href="#")= val
+    .slider
+        h2 Financial software as its best
+        h4 Discover our complete solution for Welt
+        h4 and Investmet Manager
+        a(href="#")= "Learn more"
+        

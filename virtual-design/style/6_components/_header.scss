@@ -1,0 +1,72 @@
+.headerBackground{
+    position: absolute;
+    width: 100%;
+    z-index: -999;
+}
+
+header{
+    @include flex_direction(column);
+    font-size: $font_size;
+    
+    .container{
+        @include justify_content(flex-start);
+        width: $general_width;
+        margin: 20px auto;
+    
+        .logo{
+            display: inline-block;
+        }
+    
+        .menu{
+            @include justify_content(flex-end);
+            align-items: center;
+            width: 100%;
+    
+            .menuTop{
+                ul{
+                    li{
+                        float: left;
+                        margin: 0 0 0 36px;
+    
+                        a{
+                            color: $menu_font_color;
+                            text-decoration: none;
+                            font-size: 7em;
+                            font-family: 'Roboto';
+                            font-weight: bold;
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .slider{
+        @include flex_direction(column);
+        justify-content: center;
+        width: $general_width;
+        height: 302px;
+        margin: 0 auto;
+        color: white;
+        h2{
+            margin: 0 0 10px 0;
+        }
+        h4{
+            margin: 0 0 10px 0;
+        }
+        a{
+            width: 200px;
+            text-align: center;
+            font-size:10em;
+            font-weight:bold;
+            color: white;
+            padding: 20px;
+            background-color: rgb(66, 167, 66);
+            border-radius: 10px;
+            text-decoration: none;
+            font-family: 'Roboto';
+            font-weight: bold;
+            font-style: normal;
+        }
+    }
+}

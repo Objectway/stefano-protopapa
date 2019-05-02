@@ -1,0 +1,63 @@
+.child{
+    width: 550px;
+    height: 550px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 3;
+    border: 3px solid lightcoral;
+    background-color: white;
+    box-sizing: border-box;
+    &--isVisible{
+        display: block;
+    }
+    
+    .close{
+        text-align: right;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+        font-family: 'Roboto';
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .popUpBody{
+        font-size: 20px;
+        font-weight: bold;
+        padding: 40px;
+        div{
+            margin-bottom:60px;
+            span{
+                font-size: 20px;
+                font-weight: bold;
+                font-family: 'Roboto';
+                font-weight: bold;
+                font-style: normal;
+            }
+            span:first-child{
+                color:black;
+            }
+            span:last-child{
+                color: red;
+                margin-left: 40px;
+            }
+        }
+    }
+}
+
+.div_overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.7;
+    display: none;
+    z-index: 2;
+    &--isVisible{
+        display: block;
+    }
+}
