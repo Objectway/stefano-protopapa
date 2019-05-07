@@ -1,0 +1,51 @@
+.addNewAmount {
+  display: flex;
+  flex-direction: row;
+}
+.addNewAmount .block1 {
+  display: flex;
+  flex-direction: column;
+  background-color: gold;
+  width: 70%;
+}
+.addNewAmount .block1__elementInputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.addNewAmount .block1__elementInputsLbl {
+  margin-bottom: 5px;
+}
+.addNewAmount .block1__elementInputsText {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.addNewAmount .block1__elementInputsText--currency {
+  margin-bottom: 10px;
+}
+@media (min-width: 960px) {
+  .addNewAmount .block1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .addNewAmount .block1__elementInputs {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+}
+.addNewAmount__elementButton {
+  display: flex;
+  align-items: stretch;
+  background-color: aquamarine;
+  width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.addNewAmount__elementButtonButt {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

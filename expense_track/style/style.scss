@@ -1,0 +1,49 @@
+.addNewAmount{
+    display: flex;
+    flex-direction: row;
+    .block1{
+        display: flex;
+        flex-direction: column;
+        background-color: gold;
+        width:70%;
+        &__elementInputs{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+            padding: 10px;
+            box-sizing: border-box;
+            &Lbl{
+                margin-bottom: 5px
+            }
+
+            &Text{
+                width:100%;
+                margin-bottom: 10px;
+                &--currency{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        @media (min-width: 960px){
+            display: flex;
+            flex-direction: row;
+            &__elementInputs{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+            }
+        }
+    }
+    &__elementButton{
+        display: flex;
+        align-items: stretch;
+        background-color: aquamarine;
+        width:30%;
+        padding: 10px;
+        box-sizing: border-box;
+        &Butt{
+            width:100%;
+
+        }
+    }
+}
