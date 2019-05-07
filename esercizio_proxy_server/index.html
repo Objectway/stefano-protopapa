@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>GATTILE</title>
+    </head>
+ 
+    <body>
+        <script>
+            fetch('http://127.0.0.1:3000/api/list').then(function(data){
+
+                
+                console.log(data);
+                
+                return data.json();
+                /**/
+            }).then(function(json){
+                console.log(json);
+                document.getElementsByTagName("body")[0].innerHTML += "<ul><li>" + json[0].name + " - " + json[0].color + "</li><li>" + json[1].name + " - " + json[1].color + "</li></ul>";
+            });
+        </script>
+        lasta gatti
+    </body>
+
+</html>
