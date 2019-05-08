@@ -1,0 +1,8 @@
+<!--<div>{{$ctrl.title}}</div>-->
+<div>
+        <h1>{{mtListCtrl.title}}</h1>
+        <mt-list-item ng-repeat="listaOgetto in mtListCtrl.lista track by $index" item-data="listaOgetto" item-index="$index"></mt-list-item>
+        <!--<div ng-repeat="listaOgetto in mtListCtrl.lista">
+            {{listaOgetto.amount}}EUR, {{listaOgetto.description}}
+        </div>-->
+</div>

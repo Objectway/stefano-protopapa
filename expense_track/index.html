@@ -8,30 +8,15 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 
-<!--<body ng-app="moneyTracker">-->
-<body>
+<body ng-app="moneyTracker">
     
-    <div class = "addNewAmount">
-        <div class="block1">
-            <div class= "block1__elementInputs">
-                <div class="block1__elementInputsLbl">Amount</div>
-                <input type="text" class="block1__elementInputsText block1__elementInputsText--currency">
-            </div>
-            <div class="block1__elementInputs">
-                <div class="block1__elementInputsLbl">Description</div>
-                <input type="text" class="block1__elementInputsText">
-            </div>
-        </div>
-        <div class= "addNewAmount__elementButton">
-            <input type="button" class="addNewAmount__elementButtonButt" value="+">
-        </div>
-    </div>
+    <mt-father></mt-father>
 
-    <div class="listAmount"></div>
-
-
-    <!--<script src="//code.angularjs.org/snapshot/angular.min.js"></script>-->
-
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="components/mt_add_item/mt_add_item.js"></script>
+    <script src="components/mt_list/mt_list.js"></script>
+    <script src="components/mt_list_item/mt_list_item.js"></script>
+    <script src="components/mt_father/mt_father.js"></script>
 </body>
 
 </html>

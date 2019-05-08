@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .addNewAmount {
   display: flex;
   flex-direction: row;
@@ -17,13 +21,17 @@
 }
 .addNewAmount .block1__elementInputsLbl {
   margin-bottom: 5px;
+  color: royalblue;
 }
 .addNewAmount .block1__elementInputsText {
   width: 100%;
   margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 10px 5px;
+  border: 1px solid royalblue;
 }
 .addNewAmount .block1__elementInputsText--currency {
-  margin-bottom: 10px;
+  font-weight: bold;
 }
 @media (min-width: 960px) {
   .addNewAmount .block1 {
@@ -46,6 +54,29 @@
 }
 .addNewAmount__elementButtonButt {
   width: 100%;
+  background-color: lightcoral;
+  border: 1px solid royalblue;
+  color: royalblue;
+  font-size: 44px;
+  font-weight: bold;
+}
+.addNewAmount__elementButtonButt:active {
+  background-color: coral;
+}
+
+.listAmount {
+  background-color: lightblue;
+  padding: 10px;
+  box-sizing: border-box;
+  color: royalblue;
+}
+.listAmount .listItem {
+  background-color: khaki;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.listAmount .listItem__delete {
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

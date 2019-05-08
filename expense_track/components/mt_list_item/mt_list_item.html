@@ -1,0 +1,10 @@
+<div class='listItem'>
+    <div class='listItem__date'>
+        <span class="listItem__dateDay">{{$ctrl.itemData.date.day}}</span>
+        <span class="listItem__dateMonth">{{$ctrl.itemData.date.month}}</span>
+        <span class="listItem__dateYear">{{$ctrl.itemData.date.year}}</span>
+    </div>
+    <div class='listItem__amount'>{{$ctrl.itemData.amount}}</div>
+    <div class='listItem__description'>{{$ctrl.itemData.description}}</div>
+    <div class='listItem__delete' ng-click="$ctrl.deleteItem()">x</div>
+</div>

@@ -1,0 +1,25 @@
+<div class = "addNewAmount">
+    <div class="block1">
+        <div class= "block1__elementInputs">
+            <div class="block1__elementInputsLbl">Amount</div>
+            <input 
+                type="text" 
+                class="block1__elementInputsText block1__elementInputsText--currency" 
+                placeholder="EUR 1000,00" 
+                ng-model="itemAmount" 
+            >
+        </div>
+        <div class="block1__elementInputs">
+            <div class="block1__elementInputsLbl">Description</div>
+            <input 
+                type="text" 
+                class="block1__elementInputsText"
+                placeholder="Description" 
+                ng-model="itemDesc" 
+            >
+        </div>
+    </div>
+    <div class= "addNewAmount__elementButton">
+        <input type="button" class="addNewAmount__elementButtonButt" value="+" ng-click="$ctrl.addItem()">
+    </div>
+</div>
