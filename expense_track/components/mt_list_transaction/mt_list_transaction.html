@@ -1,0 +1,38 @@
+<div class = "addNewAmount">
+        <div 
+            class="block1" 
+            ng-class="{ 
+                'block1--positive': $ctrl.isPositive, 
+                'block1--negative': !$ctrl.isPositive 
+            }">
+        <!--<div class="block1" ng-class="{ 'block1--positive': itemAmount > 0, 'block1--negative': itemAmount < 0 }">-->
+            <div class= "block1__elementInputs">
+                <div class="block1__elementInputsLbl">Amount</div>
+                <input 
+                    type="text" 
+                    class="block1__elementInputsText block1__elementInputsText--currency" 
+                    placeholder="EUR 1000,00" 
+                    ng-model="itemAmount" 
+                    ngChange=""
+                >
+                <input
+                    type="button"
+                    class="block1__elementInputsInput"
+                    value="Check Amount"
+                    ng-click = "$ctrl.isPositive = !$ctrl.isPositive"
+                >
+            </div>
+            <div class="block1__elementInputs">
+                <div class="block1__elementInputsLbl">Description</div>
+                <input 
+                    type="text" 
+                    class="block1__elementInputsText"
+                    placeholder="Description" 
+                    ng-model="itemDesc" 
+                >
+            </div>
+        </div>
+        <div class= "addNewAmount__elementButton">
+            <input type="button" class="addNewAmount__elementButtonButt" value="+" ng-click="$ctrl.addItem()">
+        </div>
+    </div>

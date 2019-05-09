@@ -1,4 +1,3 @@
-let myApp = angular.module('moneyTracker', [])
 myApp
     .component('mtAddItem', {
         controller: function($scope, $rootScope){

@@ -1,7 +1,20 @@
 <!--<div>{{$ctrl.title}}</div>-->
-<div>
+<div class="listAmount">
         <h1>{{mtListCtrl.title}}</h1>
-        <mt-list-item ng-repeat="listaOgetto in mtListCtrl.lista track by $index" item-data="listaOgetto" item-index="$index"></mt-list-item>
+        <!--<mt-list-item 
+            ng-repeat="idOgetto in mtListCtrl.listIds" 
+            item-index="idOgetto"
+        ></mt-list-item>-->
+        <!--<mt-list-item ng-repeat="listaOgetto in mtListCtrl.lista track by $index" item-data="listaOgetto" item-index="$index"></mt-list-item>-->
+        <mt-list-item-id
+            ng-repeat="id in mtListCtrl.listaIds" 
+            id-item="id"
+        >
+
+        </mt-list-item-id>
+
+        <div class="listTotal">Total: {{mtListCtrl.total}}</div>
+
         <!--<div ng-repeat="listaOgetto in mtListCtrl.lista">
             {{listaOgetto.amount}}EUR, {{listaOgetto.description}}
         </div>-->

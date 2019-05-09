@@ -10,13 +10,29 @@
 
 <body ng-app="moneyTracker">
     
-    <mt-father></mt-father>
+    <div class="menu">
+      <a class="menu__new" ui-sref="new" ui-sref-active="menu__new--active">New</a>
+      <a class="menu__list" ui-sref="list" ui-sref-active="menu__list--active">List</a>
+    </div>
+
+    <ui-view></ui-view>
+    
+    <!--<mt-list-transaction></mt-list-transaction>
+    <div class="listAmount">
+        <mt-list title="Lista"></mt-list>
+    </div>-->
 
     <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="services/route.js"></script>
     <script src="components/mt_add_item/mt_add_item.js"></script>
     <script src="components/mt_list/mt_list.js"></script>
     <script src="components/mt_list_item/mt_list_item.js"></script>
-    <script src="components/mt_father/mt_father.js"></script>
+    <script src="components/mt_list_item_id/mt_list_item_id.js"></script>
+    <script src="components/mt_tracker/mt_tracker.js"></script>
+    <script src="components/mt_list_transaction/mt_list_transaction.js"></script>
+
+    <script src="services/mtServiceList.js"></script>
 </body>
 
 </html>

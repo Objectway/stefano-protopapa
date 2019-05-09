@@ -6,10 +6,13 @@ myApp
             itemData: '=',
             itemIndex: '='
         },
-        controller: function($scope){
-            this.deleteItem = function(){
-                console.log(this.itemData, this.itemIndex)
-                $scope.$emit('listItemDelete', this.itemIndex)
+        controller: function($scope, mtServiceList){
+            let ctrl = this
+            /*ctrl.$onInit = function(){
+                ctrl.itemData = mtServiceList.getItem(ctrl.itemIndex)
+            }*/
+            ctrl.deleteItem = function(){
+                mtServiceList.removeItemFromList(ctrl.itemIndex);
             }
         },
 

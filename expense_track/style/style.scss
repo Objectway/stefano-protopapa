@@ -8,7 +8,16 @@ body{
         display: flex;
         flex-direction: column;
         background-color: gold;
+        color: royalblue;
         width:70%;
+        &--positive{
+            background-color: green;
+            color: white;
+        }
+        &--negative{
+            background-color: crimson;
+            color: white;
+        }
         &__elementInputs{
             display: flex;
             flex-direction: column;
@@ -17,7 +26,6 @@ body{
             box-sizing: border-box;
             &Lbl{
                 margin-bottom: 5px;
-                color: royalblue;
             }
 
             &Text{
@@ -29,6 +37,14 @@ body{
                 &--currency{
                     font-weight:bold;
                 }
+            }
+            &Input{
+                background-color: aquamarine;
+                border: 1px solid royalblue;
+                color: royalblue;
+                padding: 5px;
+                font-size: 12px;
+                font-weight: bold;
             }
         }
         @media (min-width: 960px){
@@ -70,11 +86,41 @@ body{
     box-sizing: border-box;
     color: royalblue;
     .listItem{
-        background-color: khaki;
+        background-color: #f6f6f6;
         margin-bottom: 10px;
         padding: 10px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 15% auto 50px;
+        grid-template-rows: auto auto;
+        border-radius: 4px;
+        &__date{
+            grid-area: 1 / 1 / 3 / 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__amount{
+            grid-area: 1 / 2 / 2 / 3;
+        }
+        &__description{
+            grid-area: 2 / 2 / 3 / 3;
+        }
         &__delete{
+            grid-area: 1 / 3 / 3 / 4;
+            border: red 1px solid;
             color: red;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 2px;
+            line-height: 43px;
+            border-radius: 100px;
+        }
+        &--positive{
+            border-left: green 4px solid;
+        }
+        &--negative{
+            border-left: crimson 4px solid;
         }
     }
 }

@@ -3,10 +3,25 @@ myApp
         bindings: {
             title: '@', // '=' -> lega il binding a una variabile
         },
-        controller: function($scope, $rootScope){
-
+        controller: function($scope, $rootScope, mtServiceList){
+            
             var ctrl = this;
+            
+            ctrl.lista = mtServiceList.getList()
+            ctrl.listIds = Object.keys(ctrl.lista)
+            ctrl.$onInit = function(){
+                ctrl.lista = mtServiceList.getList()
+                ctrl.listaIds = mtServiceList.getListIds()
+                ctrl.total = mtServiceList.getTotal()
+            }
 
+            ctrl.$doCheck = function(){
+
+                ctrl.listaIds = mtServiceList.getListIds()
+                ctrl.total = mtServiceList.getTotal()
+            }
+            /*
+            
             ctrl.lista = [
                 {
                     date: {
@@ -59,7 +74,7 @@ myApp
             
             })
 
-            /*this.$onInit = function(){
+            this.$onInit = function(){
                 console.log("on init")
             }
             this.$onChanges = function(cambio){
