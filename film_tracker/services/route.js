@@ -11,23 +11,22 @@ myApp.config(function($stateProvider) {
             name: 'list',
             url: '/list',
             component: 'ftList'
-        }
-        ,
+        },
         {
             name: 'detail',
-            url: '/list/{itemId}',
-            component: 'mtListItemId',
-            /*resolve: {
+            url: '/list/{imdbId}',
+            component: 'ftFilmDetailItem',
+            resolve: {
                 itemDataFromRoute: function(mtServiceList, $transition$) {
                     return mtServiceList.getItemById($transition$.params().itemId)
                 },
-                showDelete: function() {
+                /*showDelete: function() {
                     return false;
-                }
+                }*/
                 // itemId: function($transition$) {
                 //     return $transition$.params().itemId
                 // }
-            }*/
+            }
         }
     ]
 
