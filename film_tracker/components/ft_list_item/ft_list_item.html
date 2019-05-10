@@ -1,0 +1,9 @@
+<div class='listItem' 
+    ng-class="{ 
+        'listItem--positive': $ctrl.itemData.visto, 
+        'listItem--negative': !$ctrl.itemData.visto 
+    }">
+    <div class='listItem__title'>{{$ctrl.itemData.title}}</div>
+    <div class='listItem__vote'>{{$ctrl.itemData.vote}}</div>
+    <div class='listItem__delete' ng-click="$ctrl.deleteItem()"><span>x</span></div>
+</div>

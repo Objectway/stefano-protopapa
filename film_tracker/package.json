@@ -1,0 +1,19 @@
+{
+  "name": "film_tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch style:style",
+    "watch1": "http-server -a localhost -p 8080 -c-1",
+    "dev": "concurrently \"npm run watch\" \"npm run watch1\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "httpdispatcher": "2.1.2",
+    "http-proxy": "1.17.0",
+    "concurrently": "^4.1.0"
+  }
+}

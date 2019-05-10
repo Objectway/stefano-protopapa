@@ -1,0 +1,52 @@
+<div class="frmFilm">
+    <div class="frmFilm__riga1">
+        <div class="frmFilm__riga1LblText">Titolo</div>
+        <input type="text" class="frmFilm__riga1Text" ng-model="$ctrl.filmTitle" ng-keyup="$ctrl.searchFilm()">
+        <div class="frmFilm__riga1LblVisto">Visto</div>
+        <input type="checkbox" class="frmFilm__riga1Check" ng-model="$ctrl.filmVisto">
+    </div>
+
+    <!--<button class="search" ng-click="$ctrl.searchFilm()">Cerca film</button>-->
+    <div class="frmFilm__riga1__searchList">
+        <ul>
+            <!--<li 
+                class="frmFilm__riga1__searchListItem"
+                ng-repeat="result in $ctrl.searchResult"
+                ng-class="{'frmFilm__riga1__searchListItem--active': result.imdbID == $ctrl.imdbID}"
+                ng-click="$ctrl.imdbID = result.imdbID"
+            >-->
+            <li 
+                class="frmFilm__riga1__searchListItem"
+                ng-repeat="result in $ctrl.searchResult"
+                ng-class="{'frmFilm__riga1__searchListItem--active': result.imdbID == $ctrl.selectedItem.imdbID}"
+                ng-click="$ctrl.selectedItem = result"
+            >
+            {{result.Title}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="frmFilm__riga2" ng-if="$ctrl.filmVisto">
+        <p>Voto: {{$ctrl.votoFilm}}</p>
+        <label 
+            class="frmFilm__riga2Voto" 
+            ng-repeat="voto in $ctrl.votoRadio"
+            ng-class="{ 
+                'frmFilm__riga2Voto--radioColor': $ctrl.votoFilm >= voto.val, 
+            }">
+            <span>{{voto.val}}</span>
+            <input 
+                class="filmVoto" 
+                type="radio" 
+                name="filmVoto" 
+                ng-value="voto.val" 
+                ng-model="$ctrl.votoFilm"
+                />
+        </label>
+    </div>
+
+
+    <div class="frmFilm__riga3">
+        <input type="button" class="frmFilm__riga3Butt" value="Salva" ng-click="$ctrl.filmSalva()">
+    </div>
+</div>

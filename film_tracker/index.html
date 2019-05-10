@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>FilmTracker</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <div ng-app="filmTracker">
+        <div class="menu">
+            <a class="menu__new" ui-sref="new" ui-sref-active="menu__new--active">New</a>
+            <a class="menu__list" ui-sref="list" ui-sref-active="menu__list--active">List</a>
+        </div>
+
+        <ui-view></ui-view>
+
+    </div>
+
+    <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="services/route.js"></script>
+    <script src="services/ftServiceList.js"></script>
+    <script src="services/ftSearchFilm.js"></script>
+    <script src="components/ft_input_form/ft_input_form.js"></script>
+    <script src="components/ft_list/ft_list.js"></script>
+    <script src="components/ft_list_item/ft_list_item.js"></script>
+</body>
+
+</html>

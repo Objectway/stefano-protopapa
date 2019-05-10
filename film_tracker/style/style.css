@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.frmFilm {
+  background-color: darkblue;
+  color: white;
+  padding: 10px;
+}
+.frmFilm__riga1 {
+  display: grid;
+  grid-template-columns: auto 50px;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+.frmFilm__riga1LblText {
+  grid-area: 1/1/2/2;
+}
+.frmFilm__riga1Text {
+  grid-area: 2/1/3/2;
+}
+.frmFilm__riga1LblVisto {
+  grid-area: 1/2/2/3;
+}
+.frmFilm__riga1LblVistoVoto--radioColor {
+  background-color: yellow;
+}
+.frmFilm__riga1__searchList ul {
+  list-style-type: none;
+}
+.frmFilm__riga1__searchListItem {
+  font-weight: bold;
+}
+.frmFilm__riga1__searchListItem--active {
+  color: yellowgreen;
+}
+.frmFilm__riga1Check {
+  grid-area: 2/2/3/3;
+}
+.frmFilm__riga2 {
+  margin-bottom: 10px;
+}
+.frmFilm__riga3 {
+  margin-bottom: 10px;
+}
+.frmFilm__riga3Butt {
+  width: 100%;
+}
+
+.filmList {
+  background-color: lightblue;
+  color: darkcyan;
+  padding: 10px;
+}
+.filmList .listItem {
+  background-color: gainsboro;
+  color: black;
+  margin-bottom: 10px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: auto 100px 50px;
+  grid-template-rows: auto auto;
+}
+.filmList .listItem--positive {
+  border-left: green solid 4px;
+}
+.filmList .listItem--negative {
+  border-left: red solid 4px;
+}
+.filmList .listItem :last-child {
+  margin-bottom: 0px;
+}
+.filmList .listItem__title {
+  grid-area: 1/1/2/2;
+}
+.filmList .listItem__vote {
+  grid-area: 1/2/2/3;
+}
+.filmList .listItem__delete {
+  grid-area: 1/3/2/4;
+}
+.filmList .listItem__delete span {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
