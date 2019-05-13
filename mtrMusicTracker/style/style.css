@@ -1,3 +1,10 @@
-
+.listAlbum {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.listAlbum--grey {
+  background-color: #f6f6f6;
+}
 
 /*# sourceMappingURL=style.css.map */

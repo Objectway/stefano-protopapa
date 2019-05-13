@@ -13,13 +13,18 @@
     <div ng-app="musicTracker">
         
             <mtr-manual-insert-form></mtr-manual-insert-form>
+            <mtr-manual-list title="Lista album"></mtr-manual-list>
 
     </div>
 
     <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
     <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
     <script src="app.js"></script>
+    <script src="services/mtrManualListService.js"></script>
+    <script src="filters/mtrCurrency.js"></script>
     <script src="components/mtr_manual_insert_form/mtr_manual_insert_form.js"></script>
+    <script src="components/mtr_manual_list/mtr_manual_list.js"></script>
+    <script src="components/mtr_list_item/mtr_list_item.js"></script>
     <!--<script src="services/route.js"></script>
     <script src="services/ftServiceList.js"></script>
     <script src="services/ftSearchFilm.js"></script>
