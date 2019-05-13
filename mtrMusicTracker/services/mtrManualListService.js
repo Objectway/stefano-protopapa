@@ -3,10 +3,11 @@ myApp
         let list = [
             {
                 id: 1,
-                artist: "Led Zeppelin",
-                name: "IV",
-                track: 12,
-                amount: 17.104567,
+                artistId: "",
+                artistName: "Led Zeppelin",
+                collectionName: "IV",
+                trackCount: 12,
+                collectionPrice: 17.104567,
                 vote: 5
             }
         ]

@@ -7,3 +7,19 @@
         background-color: #f6f6f6;
     }
 }
+
+
+.searchFrm{
+
+    &__listResult
+    {
+
+        &Li{
+
+            &--active
+            {
+                color: red
+            }
+        }
+    }
+}

@@ -6,7 +6,7 @@
             <li 
                 class="searchFrm__listResultLi"
                 ng-repeat="result in $ctrl.searchResult"
-                ng-class="{'searchFrm__listResultLi--active': result.artistId == $ctrl.selectedItem.artistId}"
+                ng-class="{'searchFrm__listResultLi--active': result.collectionId == $ctrl.selectedItem.collectionId}"
                 ng-click="$ctrl.selectedItem = result"
             >
             {{result.artistName}} - {{result.collectionName}}
@@ -21,5 +21,5 @@
         <option ng-value="4">4 &#10032;</option> 
         <option ng-value="5">5 &#10032;</option> 
     </select>
-    <input class="searchFrm__saveBut" type="button" value="salva">
+    <input class="searchFrm__saveBut" type="button" value="salva" ng-click="$ctrl.saveAlbum()">
 </div>

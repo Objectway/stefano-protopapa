@@ -1,7 +1,7 @@
 
 myApp
 .component('mtrSearchInsertForm', {
-    controller: function(mtrSearchService){
+    controller: function(mtrSearchService, mtrManualListService){
         var ctrl = this;
 
         ctrl.searchResult = []
@@ -18,6 +18,19 @@ myApp
                 .catch(error => {
                     console.log(error)
                 })
+        }
+
+        ctrl.saveAlbum = function(){
+            let newAlbum = {
+                id: ctrl.selectedItem.collectionId,
+                artistId: ctrl.selectedItem.artistId,
+                artistName: ctrl.selectedItem.artistName,
+                collectionName: ctrl.selectedItem.collectionName,
+                trackCount: ctrl.selectedItem.trackCount,
+                collectionPrice: ctrl.selectedItem.collectionPrice,
+                vote: ctrl.albumVote
+            }
+            mtrManualListService.addAlbum(newAlbum)
         }
 
     },
