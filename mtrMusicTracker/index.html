@@ -12,8 +12,9 @@
 
     <div ng-app="musicTracker">
         
-            <mtr-manual-insert-form></mtr-manual-insert-form>
-            <mtr-manual-list title="Lista album"></mtr-manual-list>
+            <!--<mtr-manual-insert-form></mtr-manual-insert-form>
+            <mtr-manual-list title="Lista album"></mtr-manual-list>-->
+            <mtr-search-insert-form></mtr-search-insert-form>
 
     </div>
 
@@ -21,11 +22,13 @@
     <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
     <script src="app.js"></script>
     <script src="services/mtrManualListService.js"></script>
+    <script src="services/mtrSearchService.js"></script>
     <script src="filters/mtrCurrency.js"></script>
     <script src="components/mtr_manual_insert_form/mtr_manual_insert_form.js"></script>
     <script src="components/mtr_manual_list/mtr_manual_list.js"></script>
     <script src="components/mtr_list_item/mtr_list_item.js"></script>
     <script src="components/mtr_ranking_star/mtr_ranking_star.js"></script>
+    <script src="components/mtr_search_insert_form/mtr_search_insert_form.js"></script>
 </body>
 
 </html>
