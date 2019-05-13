@@ -35,7 +35,7 @@ myApp
                     method: 'GET',
                     url: searchPoint
                 }).then(function (responseJson) {
-                    if(responseJson.data.resultCount !== 0)
+                    if(responseJson.status !== 0)
                     {
                         rit.resolve(responseJson.data.results[0])
                     }else{

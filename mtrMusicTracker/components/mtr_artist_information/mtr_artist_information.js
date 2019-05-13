@@ -11,7 +11,6 @@ myApp
             mtrSearchService.getArtistInformation(ctrl.itemId)
                 .then(results => {
                     ctrl.searchResult = results
-                    console.log(ctrl.searchResult)
                     ctrl.artistName = ctrl.searchResult.artistName
                     ctrl.primaryGenreName = ctrl.searchResult.primaryGenreName
                 })
