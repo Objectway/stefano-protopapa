@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>MusicTracker</title>
+  <title>Music Tracker</title>
   <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -12,10 +12,16 @@
 
     <div ng-app="musicTracker">
         
+            <div class="menu">
+                    <a class="menu__new" ui-sref="new" ui-sref-active="menu__new--active">Aggiungi</a>
+                    <a class="menu__list" ui-sref="list" ui-sref-active="menu__list--active">Lista</a>
+                </div>
+        
+                <ui-view></ui-view>
             <!--<mtr-manual-insert-form></mtr-manual-insert-form>
-            <mtr-manual-list title="Lista album"></mtr-manual-list>-->
-            <mtr-search-insert-form></mtr-search-insert-form>
             <mtr-manual-list title="Lista album"></mtr-manual-list>
+            <mtr-search-insert-form></mtr-search-insert-form>
+            <mtr-manual-list title="Lista album"></mtr-manual-list>-->
 
     </div>
 

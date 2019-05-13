@@ -1,7 +1,7 @@
 
 myApp
 .component('mtrSearchInsertForm', {
-    controller: function(mtrSearchService, mtrManualListService){
+    controller: function($state, mtrSearchService, mtrManualListService){
         var ctrl = this;
 
         ctrl.searchResult = []
@@ -31,6 +31,8 @@ myApp
                 vote: ctrl.albumVote
             }
             mtrManualListService.addAlbum(newAlbum)
+
+            $state.go('list');
         }
 
     },
