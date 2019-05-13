@@ -16,6 +16,16 @@ myApp.config(function($stateProvider) {
             url: '/list',
             component: 'mtrManualList'
         },
+        {
+            name: 'detail',
+            url: '/list/{artistId}',
+            component: 'mtrArtistInformation',
+            resolve: {
+                itemId: function($transition$) {
+                    return $transition$.params().artistId
+                }
+            }
+        }
     ]
 
     routes.forEach(r => {

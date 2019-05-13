@@ -1,11 +1,13 @@
 <div 
     class='listAlbum' 
-    ui-sref="detail({albumId : $ctrl.itemData.id})"
     ng-class="{ 
         'listAlbum--grey': $ctrl.itemIndex%2 === 0, 
     }"
 >
-    <div class='listAlbum__albumArtist'>{{$ctrl.itemData.artistName}}</div>
+    <div 
+        class='listAlbum__albumArtist' 
+        ui-sref="detail({artistId : $ctrl.itemData.artistId})"
+    >{{$ctrl.itemData.artistName}}</div>
     <div class='listAlbum__albumName'>{{$ctrl.itemData.collectionName}}</div>
     <div class='listAlbum__albumTrack'>{{$ctrl.itemData.trackCount}}</div>
     <div class='listAlbum__albumAmount'>{{$ctrl.itemData.collectionPrice|mtrCurrency}}</div>

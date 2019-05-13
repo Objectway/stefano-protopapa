@@ -13,7 +13,6 @@ myApp
             mtrSearchService.searchForTitle(ctrl.strSearch)
                 .then(results => {
                     ctrl.searchResult = results
-                    console.log(ctrl.searchResult)
                 })
                 .catch(error => {
                     console.log(error)
