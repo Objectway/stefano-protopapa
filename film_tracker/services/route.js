@@ -17,15 +17,15 @@ myApp.config(function($stateProvider) {
             url: '/list/{imdbId}',
             component: 'ftFilmDetailItem',
             resolve: {
-                itemDataFromRoute: function(mtServiceList, $transition$) {
-                    return mtServiceList.getItemById($transition$.params().itemId)
-                },
+                //itemDataFromRoute: function(mtServiceList, $transition$) {
+                //    return mtServiceList.getItemById($transition$.params().itemId)
+                //},
                 /*showDelete: function() {
                     return false;
                 }*/
-                // itemId: function($transition$) {
-                //     return $transition$.params().itemId
-                // }
+                itemId: function($transition$) {
+                    return $transition$.params().itemId
+                }
             }
         }
     ]
