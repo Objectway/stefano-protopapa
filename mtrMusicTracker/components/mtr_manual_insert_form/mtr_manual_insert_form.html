@@ -1,0 +1,44 @@
+<div class="newAlbum">
+    <div class="newAlbum__artist">
+        <div>Arista</div>
+        <input 
+            type="text"
+            ng-model="$ctrl.albumArtist"
+        > 
+    </div>
+    <div class="newAlbum__album">
+        <div>Album</div>
+        <input 
+            type="text"
+            ng-model="$ctrl.albumName"
+        > 
+    </div>
+    <div class="newAlbum__track">
+        <div>N° Tracce</div>
+        <input 
+            type="number"
+            ng-model="$ctrl.albumTrack"
+        > 
+    </div>
+    <div class="newAlbum__amount">
+            <div>Prezzo</div>
+            <input 
+                type="number"
+                ng-model="$ctrl.albumAmount"
+            > 
+    </div>
+    <div class="newAlbum__vote">
+        <div>Vote</div>
+        <select ng-model="$ctrl.albumVote">
+            <option ng-value="0">Seleziona voto</option>
+            <option ng-value="1">1 &#10032;</option> 
+            <option ng-value="2">2 &#10032;</option> 
+            <option ng-value="3">3 &#10032;</option> 
+            <option ng-value="4">4 &#10032;</option> 
+            <option ng-value="5">5 &#10032;</option> 
+        </select>
+    </div>
+    <div class="newAlbum__save">
+        <input type="button" value="salva" ng-click="$ctrl.albumSalva()">
+    </div>
+</div>
