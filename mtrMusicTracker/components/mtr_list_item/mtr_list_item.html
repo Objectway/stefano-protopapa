@@ -9,5 +9,5 @@
     <div class='listAlbum__albumName'>{{$ctrl.itemData.name}}</div>
     <div class='listAlbum__albumTrack'>{{$ctrl.itemData.track}}</div>
     <div class='listAlbum__albumAmount'>{{$ctrl.itemData.amount|mtrCurrency}}</div>
-    <div class='listAlbum__albumVote'>{{$ctrl.itemData.vote}}</div>
+    <div class='listAlbum__albumVote'><mtr-ranking-star vote="$ctrl.itemData.vote"></mtr-ranking-star></div>
 </div>
