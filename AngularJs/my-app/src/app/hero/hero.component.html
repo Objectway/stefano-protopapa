@@ -1,3 +1,2 @@
-<p>
-  hero works!
-</p>
+<h1>Eroi</h1>
+<div *ngFor="let hero of heroList" (click) = "goToTheDetails(hero.id)">{{hero.name}}</div>
