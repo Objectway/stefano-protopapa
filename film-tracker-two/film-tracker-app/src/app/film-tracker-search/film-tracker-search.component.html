@@ -1,0 +1,24 @@
+<div>
+  <h1> Cerca il tuo film </h1>
+  <div class="searchBar">
+    <input type="text" class="searchBar__txt" placeholder='Search' [(ngModel)]="strSearch">
+    <button class="searchBar__but" (click)="searchFilm()">Enter</button>
+  </div>
+  <ul>
+    <li *ngFor="let film of filmList">
+      <div>
+        <img [src]="film.Poster" *ngIf="film.Poster !== 'N/A'"> 
+      </div>
+      <div>
+        {{film.Title}}
+      </div>
+      <div>
+        {{film.Year}}
+      </div>
+      <!--<button (click)="goToDetails(film.imbID)">Details</button>
+      <button (click)="addFilmToWatchedFilm(film)">Watched</button>
+      <button (click)="addFilmToWishList(film)">Wish</button>-->
+      <film-tracker-button [filmId]="film.imdbID" [film]="film"></film-tracker-button>
+    </li>
+  </ul>
+</div>

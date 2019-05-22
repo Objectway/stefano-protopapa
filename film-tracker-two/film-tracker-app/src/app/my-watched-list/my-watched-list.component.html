@@ -1,0 +1,16 @@
+<div>
+  <ul>
+    <li *ngFor="let film of watchedList; index as i">
+        <div>
+          <img [src]="film.Poster" *ngIf="film.Poster !== 'N/A'"> 
+        </div>
+        <div>
+          {{film.Title}}
+        </div>
+        <div>
+          {{film.Year}}
+        </div>
+        <button (click)="deleteFilm(i)">delete {{film.Title}}</button>
+    </li>
+  </ul>
+</div>

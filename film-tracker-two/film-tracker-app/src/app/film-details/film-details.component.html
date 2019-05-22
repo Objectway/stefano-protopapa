@@ -1,0 +1,14 @@
+<div *ngIf="!!filmDetails">
+<div>
+  <img [src]="filmDetails.Poster"> 
+</div>
+<div>
+  {{filmDetails.Title}}
+</div>
+<div>
+  {{filmDetails.Year}}
+</div>
+<film-tracker-button [filmId]="filmDetails.imdbID" [film]="filmDetails"></film-tracker-button>
+
+<button (click)="goBack()">Go Back!!!</button>
+</div>
