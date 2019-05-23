@@ -12,7 +12,8 @@ import { FilmDetailsComponent } from './film-details/film-details.component';
 import { MyWishListComponent } from './my-wish-list/my-wish-list.component';
 import { MyWatchedListComponent } from './my-watched-list/my-watched-list.component';
 import { MyMenuComponent } from './my-menu/my-menu.component'
-import { FilmDetailsResolverService} from './service/film-details-resolver.service'
+import { FilmDetailsResolverService} from './service/film-details-resolver.service';
+import { FilmYearPipe } from './film-tracker-search/film-year.pipe'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FilmDetailsResolverService} from './service/film-details-resolver.servi
     FilmDetailsComponent,
     MyWishListComponent,
     MyWatchedListComponent,
-    MyMenuComponent
+    MyMenuComponent,
+    FilmYearPipe
   ],
   imports: [
     BrowserModule,

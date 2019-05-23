@@ -5,7 +5,7 @@
     <button class="searchBar__but" (click)="searchFilm()">Enter</button>
   </div>
   <ul>
-    <li *ngFor="let film of filmList">
+    <li *ngFor="let film of filmList | filmYear">
       <div>
         <img [src]="film.Poster" *ngIf="film.Poster !== 'N/A'"> 
       </div>
