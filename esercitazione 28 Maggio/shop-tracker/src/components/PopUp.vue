@@ -31,27 +31,29 @@ export default class PopUp extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .child{
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -90%);
     display: block;
     z-index: 3;
-    border: 3px solid red;
+    border: 3px solid #42b983;
+    color: #2c3e50;
     background-color: white;
     box-sizing: border-box;
     
     .close{
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
         text-align: right;
-        color: black;
         font-size: 20px;
         font-weight: bold;
         padding: 10px;
-        font-family: 'Roboto';
-        font-weight: bold;
-        font-style: normal;
     }
 
     .popUpBody{

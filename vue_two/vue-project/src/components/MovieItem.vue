@@ -1,6 +1,6 @@
 <template>
   <div class="movieItem" @click="goDetails()">
-    <img class='movieItem__poster' :src="element.Poster">
+    <img class='movieItem__poster' :src="element.Poster!=='N/A'? element.Poster : noImage">
     <div class='movieItem__title'>{{element.Title}}</div>
     <div class='movieItem__year'>Year: {{element.Year}}</div>
   </div>
@@ -17,6 +17,7 @@ import MovieDetails from './MovieDetails.vue'
 })
 export default class MovieItem extends Vue {
   @Prop() private element!: any;
+  public noImage: string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOKAcvMZAifPoul3B1Vv2keLKeq4-c4fe3VIzKPXyT9RDoOveXUg";
   
   goDetails(imdbID: string){
     this.$router.push('/' + this.element.imdbID);
@@ -43,7 +44,7 @@ export default class MovieItem extends Vue {
   }
 
   &__poster{
-    height: 100px;
+    width: 80px;
     border-radius: 10px;
   }
 

@@ -2,18 +2,17 @@
   <div>
     <div class="buttons">
       <button @click="goBack()">Go Back</button>
+      <button @click="showDetails()">Show Details</button>
       <button @click="showEdit()">Edit Details</button>
     </div>
-    <keep-alive>
       <component :is="dinamicComponent"></component>
-    </keep-alive>
-  </div>
+    </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import CompDetails from './CompDetails.vue';
-import EditDetails from './EditDetails.vue'
+import EditDetails from './EditDetails.vue';
 
 @Component({
   components: {
@@ -22,7 +21,7 @@ import EditDetails from './EditDetails.vue'
   }
 })
 export default class MovieDetails extends Vue {
-  private dinamicComponent: string = "comp1";
+  public dinamicComponent: string = "comp1";
 
   created(){
 
@@ -33,8 +32,17 @@ export default class MovieDetails extends Vue {
     })
   }
 
+  goBack(){
+
+    this.$router.push('/');
+  }
+
   showEdit(){
-    this.dinamicComponent = "comp2"
+    this.dinamicComponent = "comp2";
+  }
+
+  showDetails(){
+    this.dinamicComponent = "comp1";
   }
 }
 </script>

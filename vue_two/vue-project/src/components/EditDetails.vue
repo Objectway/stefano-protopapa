@@ -1,53 +1,42 @@
 <template>
   <div class="editDetails">
     <div class="editDetails__label">Poster</div>
-    <input type="text" v-model="bindPoster">
+    <input type="text" v-model="arrDetails.Poster">
     <div class="editDetails__label">Title</div>
-    <input type="text" v-model="bindTitle">
+    <input type="text" v-model="arrDetails.Title">
     <div class="editDetails__label">Year</div>
-    <input type="text" v-model="bindYear">
+    <input type="text" v-model="arrDetails.Year">
     <div class="editDetails__label">Writer</div>
-    <input type="text" v-model="bindWriter">
+    <input type="text" v-model="arrDetails.Writer">
     <div class="editDetails__label">Actors</div>
-    <input type="text" v-model="bindActors">
+    <input type="text" v-model="arrDetails.Actors">
     <div class="editDetails__label">Plot</div>
-    <input type="text" v-model="bindPlot">
+    <input type="text" v-model="arrDetails.Plot">
     <div class="editDetails__label">Runtime</div>
-    <input type="text" v-model="bindRuntime">
+    <input type="text" v-model="arrDetails.Runtime">
     <button @click="save()">Salva</button>  
-    <button @click="goBack()">Go Back</button>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import MovieDetails from './MovieDetails.vue';
+import Movie from '../movie.ts';
+
+@Component({
+  components:{
+    MovieDetails
+  }
+})
 
 @Component
 export default class EditDetails extends Vue {
-  public arrDetails: any;
-  @Prop() public bindPoster: string;
-  @Prop() public bindTitle: string;
-  @Prop() public bindYear: string;
-  @Prop() public bindWriter: string;
-  @Prop() public bindActors: string;
-  @Prop() public bindPlot: string;
-  @Prop() public bindRuntime: string;
-
-  activated(){
-
-    this.arrDetails = this.$store.getters.getMovieBind;
-
-    this.bindPoster = this.arrDetails.Poster;
-    this.bindTitle = this.arrDetails.Title;
-    this.bindYear = this.arrDetails.Year;
-    this.bindWriter = this.arrDetails.Writer;
-    this.bindActors = this.arrDetails.Actors;
-    this.bindPlot = this.arrDetails.Plot;
-    this.bindRuntime = this.arrDetails.Runtime;
-  }
+  private arrDetails: Movie = this.$store.getters.getMovieBind;
 
   save(){
-    
+    this.$store.commit('setMovie', this.arrDetails);
+    this.$store.commit('setBind', this.arrDetails);
+    debugger;
   }
 }
 </script>

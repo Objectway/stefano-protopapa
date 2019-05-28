@@ -1,6 +1,6 @@
 <template>
   <div class="movieDetails">
-    <img :src="$store.state.moviePoster">
+    <img :src="$store.state.moviePoster!=='N/A' ? $store.state.moviePoster : noImage">
     <div>
       <div>{{$store.state.movieTitle}}</div>
       <div>Year: {{$store.state.movieYear}}</div>
@@ -17,6 +17,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class CompDetails extends Vue {
+  public noImage: string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOKAcvMZAifPoul3B1Vv2keLKeq4-c4fe3VIzKPXyT9RDoOveXUg";
+  
 }
 </script>
 
