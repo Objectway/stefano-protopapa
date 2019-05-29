@@ -65,7 +65,7 @@ export default class SetTicket extends Vue {
     legend{
       color: #2c3e50;
     }
-    
+
     div{
       margin-bottom: 5px;
       
@@ -92,6 +92,7 @@ export default class SetTicket extends Vue {
       color: #fff;
       font-size: 17px;
       padding: 5px;
+      border-radius: 3px;
     }
   }
 }

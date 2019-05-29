@@ -60,6 +60,8 @@ export default class App extends Vue {
       color: #fff;
       font-size: 17px;
       padding: 5px;
+      width: 70px;
+      border-radius: 3px;
     }
   }
 }

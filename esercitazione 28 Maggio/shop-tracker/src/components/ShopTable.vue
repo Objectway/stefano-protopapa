@@ -9,7 +9,7 @@
             <th>{{converNumber(subTot() - scontoTot()) + ' €'}}</th>
           </tr>
           <tr>
-            <th colspan="4">Sconot ticket:</th>
+            <th colspan="4">Sconto ticket:</th>
             <th style="color: #b62020">{{'-' + converNumber(scontoTot()) + ' €'}}</th>
           </tr>
           <tr>

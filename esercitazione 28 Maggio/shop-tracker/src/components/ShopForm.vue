@@ -92,6 +92,7 @@ export default class ShopBody extends Vue {
       color: #fff;
       font-size: 17px;
       padding: 5px;
+      border-radius: 3px;
     }
   }
 }
