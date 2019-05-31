@@ -1,0 +1,20 @@
+version: "3.6"
+services:
+  nginx_integration:
+    container_name: nginx_integration
+    image: registry.objectway.it/blueprint/ow_nginx:1.0.8
+    ports:
+      - 8099:80
+    restart: always
+    volumes:
+      - ~/workspace/devops/logs:/var/log/nginx
+      - ~/workspace/devops/widgets:/etc/nginx/widgets
+  owui_widget_integration_test:
+    image: registry.objectway.it/owui/widget-integration-test:0.0.0
+    environment:
+      - server_name=localhost
+      - gateway_address=127.0.0.1:3010
+      - gateway_path=api
+      - enable_rewrite=false
+    volumes:
+      - ~/workspace/devops/widgets:/etc/nginx/widgets

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico">
+  <title>integration</title>
+  <style>
+    body {
+      width: 100%;
+    }
+  </style>
+  <!--Portal polyfill, please remember to add only once on portal layer-->
+  <script type="application/javascript"
+          src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+  <script type="text/javascript">
+    const _customElementsDefine = window.customElements.define;
+    window.customElements.define = function (name, className, config) {
+      if (!customElements.get(name)) {
+        _customElementsDefine.call(window.customElements, name, className, config);
+      }
+    }
+  </script>
+</head>
+<body>
+<noscript>
+  <strong>We're sorry but integration doesn't work properly without JavaScript enabled. Please enable it to
+    continue.</strong>
+</noscript>
+<owui-widget-integration-test/>
+<!-- built files will be auto injected -->
+<script>
+  document.addEventListener('owui-widget', function (event) {
+    alert(JSON.stringify(event.detail))
+  });
+</script>
+</body>
+</html>
