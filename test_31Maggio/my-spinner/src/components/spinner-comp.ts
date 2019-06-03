@@ -38,8 +38,11 @@ export class SpinnerComp extends LitElement {
   }
   
   subUno() {
-    this.num--;
-    this.change();
+    if(this.num > 0)
+    {
+      this.num--;
+      this.change();
+    }
   }
 
   addUno() {

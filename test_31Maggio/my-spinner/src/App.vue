@@ -23,10 +23,6 @@ export default class App extends Vue {
   {
     this.valore = data.detail.num;
   }
-
-  metodo(numero: number){
-    return numero++;
-  }
 }
 </script>
 <style lang="scss">
