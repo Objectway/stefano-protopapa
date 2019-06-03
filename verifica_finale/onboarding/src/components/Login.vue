@@ -8,9 +8,9 @@
         </div>
 
         <div class="Login__body">
-          <component :is="dinamicComponent"></component>
-
-          <!--<login-form></login-form>-->
+          <keep-alive>
+            <component :is="dinamicComponent"></component>
+          </keep-alive>
         </div>
     </div>
   </div>
@@ -29,13 +29,6 @@ import RetrivePassword from './RetrivePassword.vue';
   }
 })
 
-/*
-@Component({
-  components: {
-    LoginForm,
-  }
-})
-*/
 export default class Login extends Vue {
   private dinamicComponent: string = "comp1";
 
