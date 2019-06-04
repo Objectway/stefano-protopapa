@@ -26,10 +26,25 @@ import '@/components/user-row.ts';
 export default class UserList extends Vue {
   private arrUser: UserInterface[] = this.$store.getters.getListUser;
   private srcKey: string;
-  
+  private arrApp: UserInterface[] = [];
+
   usersFilter(){
-    console.log(this.srcKey);
-    this.arrUser.filter(item => item.name.includes(this.srcKey));
+//    this.arrUser.filter(item => item.name === "Leanne Graham");
+//    this.arrUser.filter(item => item.name.toLowerCase().includes(this.srcKey.toLowerCase()));
+ //   this.arrUser.filter(item => console.log(item.name.toLowerCase()));
+    this.arrUser = this.$store.getters.getListUser;
+    this.arrApp = [];
+    this.arrUser.forEach(element => {
+      console.log(element.name.toLowerCase().includes(this.srcKey.toLowerCase()));
+      let name = element.name.toLowerCase();
+      let str = this.srcKey.toLowerCase();
+      if(name.includes(str)){
+        console.log('xxx');
+        this.arrApp.push(element);
+      }
+    });
+    this.arrUser = this.arrApp;
+
   }
 }
 </script>
