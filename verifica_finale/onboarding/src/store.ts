@@ -14,6 +14,9 @@ export default new Vuex.Store({
     getInfoEndPoint(state){
       return state.infoEndPoint;
     },
+    getPhotoEndPoint(state){
+      return state.photoEndPoint;
+    },
     getListUser(state){
       return state.listUser;
     }

@@ -31,8 +31,20 @@ export default class App extends Vue {
 
   created(){
     this.axios.get(this.$store.getters.getInfoEndPoint)
-      .then((response) => {
-        this.$store.commit('setList', response.data);
+    .then((response) => {
+      //this.$store.commit('setList', response.data);
+      let arrUser = response.data;
+      let i: number = 0;
+      arrUser.forEach(element => {
+        let querystring = "?id=" + element.id;
+        this.axios.get(this.$store.getters.getPhotoEndPoint + querystring)
+          .then((response) => {
+            arrUser[i].thumb = response.data[0].thumbnailUrl;
+            arrUser[i].thumbTitle = response.data[0].title;
+            i++; 
+        });
+      });
+      this.$store.commit('setList', arrUser);
     })
   }
 
@@ -43,9 +55,10 @@ export default class App extends Vue {
 </script>
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #cccccc;
 
   header{
     display:flex;

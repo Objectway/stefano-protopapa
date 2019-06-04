@@ -16,7 +16,7 @@ export default new Router({
     {
       path: '/prospect',
       name: 'prospect',
-      component: () => import(/* webpackChunkName: "about" */ './views/UserList.vue'),
+      component: () => import('./views/UserList.vue'),
     },
   ],
 });

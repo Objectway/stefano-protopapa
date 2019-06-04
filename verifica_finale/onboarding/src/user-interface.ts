@@ -20,4 +20,6 @@ export interface UserInterace {
     "catchPhrase": string,
     "bs": string
   }
+  "thumb": string,
+  "thumbTitle": string;
 }
