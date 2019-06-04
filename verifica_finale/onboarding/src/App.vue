@@ -2,7 +2,7 @@
   <div id="app">
     <header>
         <i class="fas fa-bars" @click="openMenu = true"></i>
-        <div> CONNECTUS </div>
+        <div @click="goHome()"> CONECTUS </div>
         <i class="fas fa-sign-in-alt"></i>
     </header>
 
@@ -10,8 +10,8 @@
       <ul>
         <li><router-link class="Nav__link" to="/">Home</router-link></li>
         <li><router-link class="Nav__link" to="/prospect">Lista Utenti</router-link></li>
+        <li @click="openMenu = false"> Chiudi </li>
       </ul>
-      <span @click="openMenu = false"> X </span>
     </div>
 
     <router-view/>
@@ -48,6 +48,10 @@ export default class App extends Vue {
     })
   }
 
+  goHome(){
+    this.$router.push('/');
+  }
+
   closePopUp(){
       this.$emit('closePopUp');
   }
@@ -71,9 +75,9 @@ export default class App extends Vue {
     padding: 10px;
     div{
       width: 100%;
-      margin-left: 12px;
-      font-size: 24px;
-      font-weight: bold;
+      margin-left: 24px;
+      font-size: 18px;
+      padding-top: 6px;
     }
   }
 
@@ -92,6 +96,10 @@ export default class App extends Vue {
     padding: 24px;
     li{
       margin-bottom: 16px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 24px;
     }
     &__link{
       color: #fff;
