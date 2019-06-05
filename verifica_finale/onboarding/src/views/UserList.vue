@@ -2,9 +2,12 @@
   <div class="UserList">
     <div class="UserList__head">
       <div class="UserList__title"> Elenco Clienti e Prospect </div>
-      <div class="UserList__newUser">
+      <div class="UserList__newUser" @click="newProspect()">
         <i class="fas fa-plus-circle"></i>Crea nuovo Prospect
       </div>
+    </div>
+    <div class="UserList__modal" v-if="modalSuccess===true">
+      Utente inserito correttamente
     </div>
     <div class="UserList__userSearch">
       <i class="fas fa-search"></i>
@@ -18,33 +21,47 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { UserNameThumb }from '@/user-name-thumb.ts';
 import { UserInterface }from '@/user-interface.ts';
 import '@/components/user-row.ts';
+import { eventBus } from '@/main.ts';
 
 @Component
 export default class UserList extends Vue {
   private arrUser: UserInterface[] = this.$store.getters.getListUser;
-  private srcKey: string;
+  private srcKey: string = '';
   private arrApp: UserInterface[] = [];
+  @Prop() private modalSuccess: boolean = false;
+
+  created(){
+    eventBus.$on('i-got-success', () => {
+      this.modalSuccess = true;
+
+      console.log(this.modalSuccess);
+
+      eventBus.$off('i-got-success');
+    });
+  }
 
   usersFilter(){
 //    this.arrUser.filter(item => item.name === "Leanne Graham");
 //    this.arrUser.filter(item => item.name.toLowerCase().includes(this.srcKey.toLowerCase()));
- //   this.arrUser.filter(item => console.log(item.name.toLowerCase()));
+//    this.arrUser.filter(item => console.log(item.name.toLowerCase()));
     this.arrUser = this.$store.getters.getListUser;
     this.arrApp = [];
     this.arrUser.forEach(element => {
-      console.log(element.name.toLowerCase().includes(this.srcKey.toLowerCase()));
+      //console.log(element.name.toLowerCase().includes(this.srcKey.toLowerCase()));
       let name = element.name.toLowerCase();
       let str = this.srcKey.toLowerCase();
       if(name.includes(str)){
-        console.log('xxx');
         this.arrApp.push(element);
       }
     });
     this.arrUser = this.arrApp;
 
+  }
+
+  newProspect(){
+    this.$router.push('/new-prospect');
   }
 }
 </script>
@@ -67,6 +84,7 @@ export default class UserList extends Vue {
 
   &__newUser{
     color: #00b1e7;
+    cursor: pointer;
 
     i{
       margin-right: 4px;

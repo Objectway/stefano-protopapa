@@ -1,4 +1,4 @@
-export interface UserInterace {
+export interface UserInterface {
   "id": number,
   "name": string,
   "username": string,
@@ -22,4 +22,5 @@ export interface UserInterace {
   }
   "thumb": string,
   "thumbTitle": string;
+  "disabled": boolean;
 }

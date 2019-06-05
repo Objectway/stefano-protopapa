@@ -18,5 +18,10 @@ export default new Router({
       name: 'prospect',
       component: () => import('./views/UserList.vue'),
     },
+    {
+      path: '/new-prospect',
+      name: 'new-prospect',
+      component: () => import('./views/UserNew.vue'),
+    }
   ],
 });

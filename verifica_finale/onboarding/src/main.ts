@@ -9,7 +9,7 @@ import './registerServiceWorker';
 Vue.use(VueAxios, axios);
 Vue.config.productionTip = false;
 
-new Vue({
+export const eventBus = new Vue({
   router,
   store,
   render: (h) => h(App),

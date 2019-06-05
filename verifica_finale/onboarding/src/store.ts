@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { UserInterace } from './user-interface';
+import { UserInterface } from './user-interface';
 
 Vue.use(Vuex);
 
@@ -8,7 +8,7 @@ export default new Vuex.Store({
   state: {
     infoEndPoint: "http://jsonplaceholder.typicode.com/users",
     photoEndPoint: "http://jsonplaceholder.typicode.com/photos",
-    listUser: <UserInterace[]>[]
+    listUser: <UserInterface[]>[]
   },
   getters: {
     getInfoEndPoint(state){
@@ -25,15 +25,15 @@ export default new Vuex.Store({
     setList: (state, list) => {
       state.listUser = list;
     },
-    /*getUserId(state, username){
-      for (let i of state.listUser) {
-        if(i.username === username)
-        {
-          return i.id;
-        }
-      }
-      return false;
-    }*/
+    addItem: (state, item) => {
+      // calcolo dell'id
+      let temp: number = 0;
+      state.listUser.forEach(element => {
+        if(element.id > temp){ temp = element.id; }
+      })
+      item.id = temp + 1;
+      state.listUser.splice(0, 0, item);
+    }
   },
   actions: {
 

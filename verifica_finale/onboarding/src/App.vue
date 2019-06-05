@@ -10,6 +10,7 @@
       <ul>
         <li><router-link class="Nav__link" to="/">Home</router-link></li>
         <li><router-link class="Nav__link" to="/prospect">Lista Utenti</router-link></li>
+        <li><router-link class="Nav__link" to="/new-prospect">Nuovo Utente</router-link></li>
         <li @click="openMenu = false"> Chiudi </li>
       </ul>
     </div>
@@ -58,11 +59,12 @@ export default class App extends Vue {
 }
 </script>
 <style lang="scss">
+* {
+  box-sizing: border-box;
+}
 #app {
-  font-family: Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #cccccc;
+font-family: 'Montserrat', sans-serif;
+background-color: #f5f5f5;
 
   header{
     display:flex;
