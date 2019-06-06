@@ -3,13 +3,13 @@
     <div class="Login__overlay">
     </div>
     <div class="Login__window">
-        <div class="Login__close" @click="closePopUp()"> 
+        <div class="Login__close" @click="closePopUp()" title="Close la login">
           CHIUDI
         </div>
 
         <div class="Login__body">
           <keep-alive>
-            <component :is="dinamicComponent"></component>
+            <component :is="dinamicComponent" @closeLogin = "$emit('closeLogin')"></component>
           </keep-alive>
         </div>
     </div>
@@ -34,7 +34,7 @@ export default class Login extends Vue {
 
   closePopUp(){
       this.dinamicComponent = "comp1";
-      this.$emit('closePopUp');
+      this.$emit('closeLogin');
   }
 }
 </script>
@@ -57,6 +57,7 @@ export default class Login extends Vue {
 
   &__window{
     width: 70%;
+    height: fit-content;
     position: fixed;
     z-index: 3;
     border: 1px solid #005dad;
@@ -103,9 +104,9 @@ export default class Login extends Vue {
     font-size: 20px;
     font-weight: bold;
     padding: 10px;
-    font-family: 'Roboto';
-    font-weight: bold;
     font-style: normal;
+    color: #005dad;
+    cursor: pointer;
   }
 }
 </style>

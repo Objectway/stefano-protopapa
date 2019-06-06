@@ -8,6 +8,7 @@ export default new Vuex.Store({
   state: {
     infoEndPoint: "http://jsonplaceholder.typicode.com/users",
     photoEndPoint: "http://jsonplaceholder.typicode.com/photos",
+    session: <boolean> false,
     listUser: <UserInterface[]>[]
   },
   getters: {
@@ -19,6 +20,9 @@ export default new Vuex.Store({
     },
     getListUser(state){
       return state.listUser;
+    },
+    getSession(state){
+      return state.session;
     }
   },
   mutations: {
@@ -33,6 +37,12 @@ export default new Vuex.Store({
       })
       item.id = temp + 1;
       state.listUser.splice(0, 0, item);
+    },
+    login: (state) => {
+      state.session = true;
+    },
+    logout: (state) => {
+      state.session = false;
     }
   },
   actions: {
