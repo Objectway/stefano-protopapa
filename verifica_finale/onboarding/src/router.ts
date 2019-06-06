@@ -22,7 +22,7 @@ export default new Router({
         if(store.getters.getSession) {
           next();
         }else{
-          next(false);
+          next('/');
         }
       }
     },
@@ -33,7 +33,7 @@ export default new Router({
         if(store.getters.getSession) {
           next();
         }else{
-          next(false);
+          next('/');
         }
       }
     }

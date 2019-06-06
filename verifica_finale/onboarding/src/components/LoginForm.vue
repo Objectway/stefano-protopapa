@@ -132,10 +132,11 @@ export default class LoginForm extends Vue {
     .errMsg{
       color: #ec0f0f;
       font-size: 12px;
+      padding: 2px 0 0 0;
     }
 
     .spiceErrMsg{
-      height: 12px;
+      height: 14px;
     }
   }
 

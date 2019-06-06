@@ -8,13 +8,17 @@
         <span class="notify" v-if="userSession"><i class="fas fa-sign-out-alt" title="Logout" @click="userLogout()"></i></span>
     </header>
 
-    <div class="Nav" v-if="openMenu">
-      <ul>
-        <li><router-link class="Nav__link" to="/">Home</router-link></li>
-        <li v-if="userSession"><router-link class="Nav__link" to="/prospect">Lista Utenti</router-link></li>
-        <li v-if="userSession"><router-link class="Nav__link" to="/new-prospect">Nuovo Utente</router-link></li>
-        <li @click="openMenu = false"> Chiudi </li>
-      </ul>
+    <div class="WrapNav" v-if="openMenu">
+      <div class="WrapNav__nav">
+        <ul>
+          <li><router-link class="link" to="/"><i class="fas fa-home"></i>Home</router-link></li>
+          <li v-if="userSession"><router-link class="link" to="/prospect"><i class="fas fa-list-alt"></i>Lista Utenti</router-link></li>
+          <li v-if="userSession"><router-link class="link" to="/new-prospect"><i class="fas fa-user-cog"></i>Nuovo Utente</router-link></li>
+          <li @click="openMenu = false"><i class="fas fa-times-circle"></i> Chiudi </li>
+        </ul>
+      </div>
+      <div class="WrapNav__navSpec" @click="openMenu = false">
+      </div>
     </div>
 
     <router-view/>
@@ -113,32 +117,50 @@ background-color: #f5f5f5;
     }
   }
 
-  .Nav{
+  .WrapNav {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0.7;
-    display: block;
     z-index: 2;
     top: 0;
     left: 0;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 24px;
-    li{
-      margin-bottom: 16px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 24px;
-      cursor: pointer;
+    display: flex;
+    flex-direction: row;
+
+    &__navSpec{
+      width: 70%;
+      height: 100%;
+      background-color: transparent;
     }
-    &__link{
+
+    &__nav {
+      width: 35%;
+      height: 100%;
+      opacity: 0.7;
+      display: block;
+      background-color: black;
       color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 24px;
+      text-align: left;
+      padding: 24px;
+
+      li {
+        margin-bottom: 60px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 22px;
+        cursor: pointer;
+
+        i{
+          margin-right: 8px;
+        }
+      }
+
+      .link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
     }
   }
 

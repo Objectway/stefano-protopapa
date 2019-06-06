@@ -15,6 +15,10 @@ export default class Home extends Vue {
 </script>
 <style scoped lang="scss">
 .Home{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
   img{
     width: 100%;
   }
