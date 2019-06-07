@@ -83,6 +83,7 @@ export default class UserNew extends Vue {
     font-weight: bold;
     border-radius: 4px;
     border: 0px;
+    outline: none;
   }
 
   &__enter{
@@ -93,6 +94,7 @@ export default class UserNew extends Vue {
     font-weight: bold;
     border-radius: 4px;
     border: 0px;
+    outline: none;
   }
 }
 </style>

@@ -6,8 +6,8 @@
         <i class="fas fa-plus-circle"></i>Crea nuovo Prospect
       </div>
     </div>
-    <div class="UserList__modal" v-if="modalSuccess===true">
-      Utente inserito correttamente
+    <div class="UserList__modal" v-show="modalSuccess===true">
+      <i class="fas fa-info-circle"></i>Utente inserito correttamente
     </div>
     <div class="UserList__userSearch">
       <i class="fas fa-search"></i>
@@ -30,16 +30,14 @@ export default class UserList extends Vue {
   private arrUser: UserInterface[] = this.$store.getters.getListUser;
   private srcKey: string = '';
   private arrApp: UserInterface[] = [];
-  @Prop() private modalSuccess: boolean = false;
+  private modalSuccess : boolean = this.$store.getters.getSuccessNewUser;
+
 
   created(){
-    eventBus.$on('i-got-success', () => {
-      this.modalSuccess = true;
-
-      console.log(this.modalSuccess);
-
-      eventBus.$off('i-got-success');
-    });
+    setTimeout(() => {
+      this.$store.commit('setSuccessNewUser', false);
+      this.modalSuccess = this.$store.getters.getSuccessNewUser;
+    }, 10000)
   }
 
   usersFilter(){
@@ -63,6 +61,7 @@ export default class UserList extends Vue {
   newProspect(){
     this.$router.push('/new-prospect');
   }
+
 }
 </script>
 <style scoped lang="scss">
@@ -95,23 +94,18 @@ export default class UserList extends Vue {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 16px;
-    border: 2px solid #999;
-    border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
+    border: 0px solid #999;
+    border-bottom-width: 2px;
     padding-bottom: 4px;
 
     input{
       width: 100%;
       margin: 0px;
       border: 0px;
-      background-color: transparent;
+      background-color: #f6f6f6;
       color: #999;
       font-size: 12px;
-    }
-
-    input:focus{
-      background-color: #fff;
+      outline: none;
     }
 
     i{
@@ -125,6 +119,22 @@ export default class UserList extends Vue {
 
     &:last-child{
       margin-bottom: 0px;
+    }
+  }
+
+  &__modal{
+    background-color: #00b1e7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #005dad;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    i{
+      margin-right: 5px;
     }
   }
 }

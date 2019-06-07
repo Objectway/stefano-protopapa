@@ -8,9 +8,7 @@
         </div>
 
         <div class="Login__body">
-          <keep-alive>
-            <component :is="dinamicComponent" @closeLogin = "$emit('closeLogin')"></component>
-          </keep-alive>
+            <component :is="dinamicComponent" @closeLogin = "$emit('closeLogin')" @rePassword="dinamicComponent = $event"></component>
         </div>
     </div>
   </div>

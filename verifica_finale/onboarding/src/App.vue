@@ -11,10 +11,10 @@
     <div class="WrapNav" v-if="openMenu">
       <div class="WrapNav__nav">
         <ul>
-          <li><router-link class="link" to="/"><i class="fas fa-home"></i>Home</router-link></li>
-          <li v-if="userSession"><router-link class="link" to="/prospect"><i class="fas fa-list-alt"></i>Lista Utenti</router-link></li>
-          <li v-if="userSession"><router-link class="link" to="/new-prospect"><i class="fas fa-user-cog"></i>Nuovo Utente</router-link></li>
-          <li @click="openMenu = false"><i class="fas fa-times-circle"></i> Chiudi </li>
+          <li><router-link class="link" to="/"></i>Home</router-link></li>
+          <li v-if="userSession"><router-link class="link" to="/prospect"> Lista Utenti </router-link></li>
+          <li v-if="userSession"><router-link class="link" to="/new-prospect"> Nuovo Utente </router-link></li>
+          <li @click="openMenu = false"> Chiudi </li>
         </ul>
       </div>
       <div class="WrapNav__navSpec" @click="openMenu = false">
@@ -23,6 +23,7 @@
 
     <router-view/>
     <login v-if="openLogin" @closeLogin="openLogin = false; userSession = $store.getters.getSession"></login>
+    <loader v-if="showLoader"></loader>
     <footer>
       © 2019 ObjectWay S.p.A. — P.IVA IT07114250967 — Trademarks and brands are the property of their respective owners.
     </footer>
@@ -32,11 +33,13 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import Login from '@/components/Login.vue';
+import Loader from '@/components/Loader.vue';
 import { eventBus } from '@/main.ts';
 
 @Component({
   components: {
     Login,
+    Loader
   },
 })
 
@@ -44,25 +47,21 @@ export default class App extends Vue {
   private userSession: boolean = this.$store.getters.getSession;
   private openLogin: Boolean = false ;
   private openMenu: Boolean = false ;
+  private showLoader: Boolean = false ;
 
   created(){
-    this.axios.get(this.$store.getters.getInfoEndPoint)
-    .then((response) => {
-      //this.$store.commit('setList', response.data);
-      let arrUser = response.data;
-      let i: number = 0;
-      arrUser.forEach(element => {
-        let querystring = "?id=" + element.id;
-        this.axios.get(this.$store.getters.getPhotoEndPoint + querystring)
-          .then((response) => {
-            arrUser[i].thumb = response.data[0].thumbnailUrl;
-            arrUser[i].thumbTitle = response.data[0].title;
-            i++; 
-        });
-      });
-      this.$store.commit('setList', arrUser);
-    })
+
+    this.showLoader = true;
+    this.$store.dispatch('getUserList').then(() => {
+      let arrUsr = this.$store.getters.getInfoEndPoint;
+    }).then(() => {
+      setTimeout(() => {
+        this.showLoader = false;
+      }, 2000)
+    });
   }
+
+
 
   goHome(){
     this.$router.push('/');
@@ -144,8 +143,9 @@ background-color: #f5f5f5;
       padding: 24px;
 
       li {
-        margin-bottom: 60px;
+        margin-bottom: 24px;
         color: #fff;
+        opacity: 1;
         text-decoration: none;
         font-weight: bold;
         font-size: 22px;

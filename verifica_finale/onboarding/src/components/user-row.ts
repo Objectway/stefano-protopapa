@@ -8,12 +8,17 @@ export class UserRow extends LitElement {
     @property({type: String}) thumbTitle = '';
 
     render(){
+
+      if(!this.thumb){
+          this.thumb = "default-avatar.png";
+      }
+
       return html`
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <div class="UserRow">
             <img class="UserRow__usrImg" src="${this.thumb}" title="${this.thumbTitle}">
             <div class="UserRow__usrName">${this.name}</div>
-            <i class="fas fa-chevron-right"></i>
+            <div class="UserRow__usrProfile"><i class="fas fa-chevron-right"></i></div>
         </div>
         <style>
             .UserRow{
@@ -37,8 +42,18 @@ export class UserRow extends LitElement {
                 font-size: 12px;
                 font-weight: bold;
                 color: #000;
+                width: 100%;
+                text-align: left;
+                text-transform: capitalize;
+            }
+            
+            .UserRow__usrProfile{
+                font-size: 18px;
+                cursor: pointer;
+                color: #999;
             }
 
-        </style>`;
+        </style>
+        `;
     }
   }

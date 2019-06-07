@@ -16,7 +16,7 @@
       <div class="errMsg" v-if="viewErrPw">{{errPw}}</div>
     </div>
     <button class="LoginForm__enter" @click="enterLogin()">ACCEDI</button>
-    <div class="LoginForm__retrivePass">Recupero password</div>
+    <div class="LoginForm__retrivePass" @click="rePassword()">Recupero password</div>
   </div>
 </template>
 
@@ -92,6 +92,11 @@ export default class LoginForm extends Vue {
     this.errPw = "";
     this.viewErrPw = false;
   }
+
+  rePassword(){
+    const val: string = 'comp2';
+    this.$emit("rePassword", val);
+  }
 }
 </script>
 
@@ -127,6 +132,7 @@ export default class LoginForm extends Vue {
       padding: 8px;
       border: 1px solid #bdbebf;
       color: #000;
+      outline: none;
     }
 
     .errMsg{

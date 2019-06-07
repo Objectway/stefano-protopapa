@@ -38,7 +38,7 @@ export default class NewUserStep1 extends Vue {
 .NewUserStep1{
 
   &__subtitle{
-    font-size: 12px;
+    font-size: 16px;
     color: #bdbebf;
   }
 

@@ -80,6 +80,8 @@ export default class NewUserPersonaFisica extends Vue {
   created() {
     eventBus.$on('i-got-clicked', () => {
 
+      //valido gli elementi fel form
+
       let validate: boolean = true;
 
       if(!!!this.usrName){
@@ -98,12 +100,17 @@ export default class NewUserPersonaFisica extends Vue {
         validate = false;
         this.viewErrCf = true;
       }
+
       if(!this.usrAgree){
+        console.log(this.usrAgree);
         validate = false;
         this.viewErrPolicy = true;
       }
 
       if(validate) {
+
+        //eseguo l'inseromento del nuovo elemento
+
         let newUser = {
           "id": null,
           "name": this.usrName + " " + this.usrSurname,
@@ -114,11 +121,8 @@ export default class NewUserPersonaFisica extends Vue {
         }
 
         this.$store.commit('addItem', newUser);
-
-        eventBus.$emit('i-got-success');
-
+        this.$store.commit('setSuccessNewUser', true);
         this.$router.push('/prospect');
-
         eventBus.$off('i-got-clicked');
       }
     });
@@ -131,7 +135,7 @@ export default class NewUserPersonaFisica extends Vue {
 .NewPF {
 
   &__subtitle {
-    font-size: 12px;
+    font-size: 16px;
     color: #bdbebf;
   }
 
@@ -197,7 +201,8 @@ export default class NewUserPersonaFisica extends Vue {
       border-radius: 4px;
       border: 1px solid #bdbebf;
       color: #bdbebf;
-
+      text-transform: capitalize;
+      outline: none;
 
       &--upper{
         text-transform: uppercase;
@@ -234,6 +239,7 @@ export default class NewUserPersonaFisica extends Vue {
       width: 16px;
       height: 16px;
       margin: 0px 4px 0px 0px;
+      outline: none;
 
     }
 
@@ -253,7 +259,7 @@ export default class NewUserPersonaFisica extends Vue {
     }
 
     .normativa{
-      font-size: 12px;
+      font-size: 14px;
       color: #bdbebf;
       margin-bottom: 8px;
     }
@@ -265,6 +271,7 @@ export default class NewUserPersonaFisica extends Vue {
 
       input{
        margin: 0px 4px 0px 0px;
+       outline: none;
       }
 
       label {
