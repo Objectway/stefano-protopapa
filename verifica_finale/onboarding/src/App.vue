@@ -85,6 +85,7 @@ export default class App extends Vue {
 #app {
 font-family: 'Montserrat', sans-serif;
 background-color: #f5f5f5;
+  height: 100%;
 
   header{
     display:flex;
@@ -117,12 +118,12 @@ background-color: #f5f5f5;
   }
 
   .WrapNav {
-    position: absolute;
-    width: 100%;
+    position: fixed;
     height: 100%;
-    z-index: 2;
+    width: 100%;
     top: 0;
     left: 0;
+    z-index: 2;
     display: flex;
     flex-direction: row;
 
